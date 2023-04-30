@@ -120,28 +120,5 @@ void Record::valuesSendToStream(std::ostringstream& oStr)
         this->combinatedPower << 'W' << ' ' <<
         this->activePower << 'W' << ' ' <<
         this->reactivePower << 'W' <<
-        // calculatedPow[i] << 'W' << ' ';
         std::endl;
 }
-
-/*
-Record* Record::set_id(const std::string& id) { this->id = id; return this; }
-Record* Record::set_controllerId(const int& controllerId) { this->controllerId = controllerId; return this; }
-Record* Record::set_year(const int& year) { this->year = year; return this; }
-Record* Record::set_month(const std::string& month) { this->month = month; return this; }
-Record* Record::set_day(const std::string& day) { this->day = day; return this; }
-Record* Record::set_hour(const std::string& hour) { this->hour = hour; return this; }
-Record* Record::set_minute(const std::string& minute) { this->minute = minute; return this; }
-Record* Record::set_second(const std::string& second) { this->second = second; return this; }
-Record* Record::set_voltageLine12(const double& voltageLine12) { this->voltageLine12 = voltageLine12; return this; }
-Record* Record::set_voltageLine23(const double& voltageLine23) { this->voltageLine23 = voltageLine23; return this; }
-Record* Record::set_voltageLine31(const double& voltageLine31) { this->voltageLine31 = voltageLine31; return this; }
-Record* Record::set_currentLine1(const double& currentLine1) { this->currentLine1 = currentLine1; return this; }
-Record* Record::set_currentLine2(const double& currentLine2) { this->currentLine2 = currentLine2; return this; }
-Record* Record::set_currentLine3(const double& currentLine3) { this->currentLine3 = currentLine3; return this; }
-Record* Record::set_combinatedPower(const double& combinatedPower) { this->combinatedPower = combinatedPower; return this; }
-Record* Record::set_activePower(const double& activePower) { this->activePower = activePower; return this; }
-Record* Record::set_reactivePower(const double& reactivePower) { this->reactivePower = reactivePower; return this; }
-Record* Record::set_apparentPower(const double& apparentPower) { this->apparentPower = apparentPower; return this; }
-Record* Record::set_calculatedPower(const double& calculatedPower) { this->calculatedPower = calculatedPower; return this; }
-*/

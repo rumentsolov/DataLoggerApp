@@ -82,23 +82,6 @@ namespace DataLoggerApp {
 
 	public: System::Windows::Forms::Label^ crossTMotModel;
 
-	public:
-
-	public:
-
-	public:
-
-
-	private:
-	public:
-
-	private:
-
-
-
-
-
-	
 
 	private:
 		/// <summary>
@@ -605,18 +588,8 @@ namespace DataLoggerApp {
 
 		this->labAAppvar->Text = apparentPowerAVG.ToString("0.00") + " W";
 
-		MessageBox::Show("Job done!");
-/*
-AVG Voltage 1-2 :398.60V
-AVG Voltage 2-3 :391.55V
-AVG Voltage 3-1 :393.09V
-AVG Current Line 1 :16.99A
-AVG Current Line 2 :16.57A
-AVG Current Line 3 :16.24A
-AVG Combinated Power :0.53W
-AVG Active Power :7954.18W
-AVG Apparent Power :11282.03W
-*/
+		MessageBox::Show("Успешно запазване на данните !");
+
 	}
 	private: System::Void DataLogger_Load(System::Object^ sender, System::EventArgs^ e) {
 	}

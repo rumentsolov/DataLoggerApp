@@ -1,0 +1,8 @@
+this->Pic1->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
+			this->Pic1->Image = System::Drawing::Image::FromFile("Logo_TU_Gab.jpg");
+			this->Pic1->Location = System::Drawing::Point(1250, 660);
+			this->Pic1->Name = L"Pic1";
+			this->Pic1->Size = System::Drawing::Size(90, 80);
+			this->Pic1->SizeMode = System::Windows::Forms::PictureBoxSizeMode::StretchImage;
+			this->Pic1->TabIndex = 35;
+			this->Pic1->TabStop = false;

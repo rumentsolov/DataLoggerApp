@@ -13,6 +13,7 @@ namespace DataLoggerApp {
 	using namespace System::Windows::Forms;
 	using namespace System::Data;
 	using namespace System::Drawing;
+	using namespace System::Drawing::Imaging;
 
 	/// DataLogger class holds all objects showed on the screen
 
@@ -81,6 +82,14 @@ namespace DataLoggerApp {
 	public: System::Windows::Forms::Label^ crossTMotSL;
 
 	public: System::Windows::Forms::Label^ crossTMotModel;
+	public: System::Windows::Forms::PictureBox^ Pic1;
+
+	public:
+
+
+	public:
+
+	public:
 
 
 	private:
@@ -90,7 +99,7 @@ namespace DataLoggerApp {
 		System::ComponentModel::Container ^components;
 
 #pragma region Windows Form Designer generated code
-		/// Initialization of components in DataCollecotr Do not modify !!!
+		/// Initialization of components in DataLogger Do not modify !!!
 		void InitializeComponent(void)
 		{
 			this->btnSTOP = (gcnew System::Windows::Forms::Button());
@@ -128,6 +137,8 @@ namespace DataLoggerApp {
 			this->crossTMotLogo = (gcnew System::Windows::Forms::Label());
 			this->crossTMotSL = (gcnew System::Windows::Forms::Label());
 			this->crossTMotModel = (gcnew System::Windows::Forms::Label());
+			this->Pic1 = (gcnew System::Windows::Forms::PictureBox());
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->Pic1))->BeginInit();
 			this->SuspendLayout();
 			// 
 			// btnSTOP
@@ -520,11 +531,25 @@ namespace DataLoggerApp {
 			this->crossTMotModel->TabIndex = 32;
 			this->crossTMotModel->Text = L"Модел ходови мотор/и";
 			// 
+			// Pic1
+			// 
+			this->Pic1->AccessibleDescription = L"some";
+			this->Pic1->AccessibleName = L"Pic1";
+			this->Pic1->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
+			this->Pic1->Location = System::Drawing::Point(711, 72);
+			this->Pic1->Name = L"Pic1";
+			this->Pic1->Size = System::Drawing::Size(227, 218);
+			this->Pic1->SizeMode = System::Windows::Forms::PictureBoxSizeMode::StretchImage;
+			this->Pic1->TabIndex = 35;
+			this->Pic1->TabStop = false;
+			this->Pic1->Image = Image::FromFile("Logo_TU_Gab.jpg");
+			// 
 			// DataLogger
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(8, 16);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
-			this->ClientSize = System::Drawing::Size(1852, 768);
+			this->ClientSize = System::Drawing::Size(1011, 571);
+			this->Controls->Add(this->Pic1);
 			this->Controls->Add(this->crossTMotLogo);
 			this->Controls->Add(this->crossTMotSL);
 			this->Controls->Add(this->crossTMotModel);
@@ -563,6 +588,7 @@ namespace DataLoggerApp {
 			this->Name = L"DataLogger";
 			this->Text = L"DataLogger";
 			this->Load += gcnew System::EventHandler(this, &DataLogger::DataLogger_Load);
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->Pic1))->EndInit();
 			this->ResumeLayout(false);
 			this->PerformLayout();
 

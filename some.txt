@@ -6,3 +6,44 @@ this->Pic1->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch
 			this->Pic1->SizeMode = System::Windows::Forms::PictureBoxSizeMode::StretchImage;
 			this->Pic1->TabIndex = 35;
 			this->Pic1->TabStop = false;
+
+
+CREATE TABLE [dbo].[Table]
+(
+	[Id] INT NOT NULL PRIMARY KEY, 
+    [Hoist Sales Description] VARCHAR(50) NULL, 
+    [Tons] FLOAT NULL, 
+    [Meters] FLOAT NULL, 
+    [FEM] VARCHAR(50) NULL, 
+    [SERIE] VARCHAR(50) NULL, 
+    [ROLLZ] INT NULL, 
+    [TYPE] VARCHAR(50) NULL, 
+    [LS m/min ] FLOAT NULL, 
+    [CT m/min ] VARCHAR(50) NULL, 
+    [CT pcs] INT NULL, 
+    [LIFTING MODEL] VARCHAR(50) NULL, 
+    [Type Lifting] VARCHAR(50) NULL, 
+    [LIFTING Nom I (A)] FLOAT NULL, 
+    [LIFTING 1st kW ] FLOAT NULL, 
+    [LIFTING 2nd kW] FLOAT NULL, 
+    [LIFTING Voltage(V)] VARCHAR(50) NULL, 
+    [LIFTING S/D SP] VARCHAR(50) NULL, 
+    [LIFTING FR] VARCHAR(50) NULL, 
+    [LIFTING IP] VARCHAR(50) NULL, 
+    [LIFTING 1st POLE] INT NULL, 
+    [LIFTING 2nd POLE] VARCHAR(50) NULL, 
+    [LIFTING BRAKE] VARCHAR(50) NULL, 
+    [CROSS MODEL] VARCHAR(50) NULL, 
+    [CROSS TYPE] VARCHAR(50) NULL, 
+    [CROSS Nom I(A)] FLOAT NULL, 
+    [CROSS 1st kW] FLOAT NULL, 
+    [CROSS 2nd kW] FLOAT NULL, 
+    [CROSS Voltage(V)] VARCHAR(50) NULL, 
+    [CROSS S/D SP] VARCHAR(50) NULL, 
+    [CROSS FR] VARCHAR(50) NULL, 
+    [CROSS IP] VARCHAR(50) NULL, 
+    [CROSS 1st POLE] INT NULL, 
+    [CROSS 2nd POLE] VARCHAR(50) NULL, 
+    [CROSS BRAKE] VARCHAR(50) NULL, 
+
+)

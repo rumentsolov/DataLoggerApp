@@ -16,17 +16,17 @@
 #include "GlobalVariables.h"
 
 
-double voltageLine12AVG;       // Average voltage between line 1 and 2
-double voltageLine23AVG;       // Average voltage between line 2 and 3
-double voltageLine31AVG;       // Average voltage between line 3 and 1
-double currentLine1AVG;        // Average current in line 1
-double currentLine2AVG;        // Average current in line 2
-double currentLine3AVG;        // Average current in line 3
-double combinatedPowerAVG;     // Average combinated power factor for line 1+2+3
-double activePowerAVG;         // Average combinated active power for line 1+2+3
-double reactivePowerAVG;       // Average combinated reactive power for line 1+2+3
-double apparentPowerAVG;       // Average combinated apparent power for line 1+2+3
-double calculatedPowerAVG;     // Average combinated calculated power for line 1+2+3
+float voltageLine12AVG;       // Average voltage between line 1 and 2
+float voltageLine23AVG;       // Average voltage between line 2 and 3
+float voltageLine31AVG;       // Average voltage between line 3 and 1
+float currentLine1AVG;        // Average current in line 1
+float currentLine2AVG;        // Average current in line 2
+float currentLine3AVG;        // Average current in line 3
+float combinatedPowerAVG;     // Average combinated power factor for line 1+2+3
+float activePowerAVG;         // Average combinated active power for line 1+2+3
+float reactivePowerAVG;       // Average combinated reactive power for line 1+2+3
+float apparentPowerAVG;       // Average combinated apparent power for line 1+2+3
+float calculatedPowerAVG;     // Average combinated calculated power for line 1+2+3
 
 
 void writeToFL(std::string totalString, const char* newFile) {
@@ -57,7 +57,7 @@ void operateTXTFile() { // Since sometimes provides me errors when working with 
     std::string line;
     int startUpCurrent = 0; // this will indicate if the current is the Startup -> every first record after 0.00 in current is startup
 
-    double line1tmp , line2tmp , line3tmp ;
+    float line1tmp , line2tmp , line3tmp ;
 
     line1tmp = line2tmp = line3tmp = 15.00;
 
@@ -66,7 +66,7 @@ void operateTXTFile() { // Since sometimes provides me errors when working with 
         counter++;
         if (counter > 2) { // skipping first 2 rows from file
 
-            for (int i = 0; i < line.size(); i++) if (line[i] == ',') line[i] = ' ';
+            for (size_t i = 0; i < line.size(); i++) if (line[i] == ',') line[i] = ' ';
 
             std::stringstream sStr(line);
             std::string dateDtmp, timeDtmp;
@@ -79,29 +79,29 @@ void operateTXTFile() { // Since sometimes provides me errors when working with 
             std::string minute;                 // minute record is created
             std::string second;                 // second record is created
 
-            double voltageLine12;       // voltage between line 1 and 2
-            double voltageLine23;       // voltage between line 2 and 3
-            double voltageLine31;       // voltage between line 3 and 1
-            double currentLine1;        // current in line 1
-            double currentLine2;        // current in line 2
-            double currentLine3;        // current in line 3
-            double combinatedPower;     // combinated power factor for line 1+2+3
-            double activePower;         // combinated active power for line 1+2+3
-            double reactivePower;       // combinated reactive power for line 1+2+3
-            double apparentPower;       // combinated apparent power for line 1+2+3 , WHEN IT IS "-" POSSITION DOWN
-            double calculatedPower = 0; // combinated calculated power for line 1+2+3
+            float voltageLine12;       // voltage between line 1 and 2
+            float voltageLine23;       // voltage between line 2 and 3
+            float voltageLine31;       // voltage between line 3 and 1
+            float currentLine1;        // current in line 1
+            float currentLine2;        // current in line 2
+            float currentLine3;        // current in line 3
+            float combinatedPower;     // combinated power factor for line 1+2+3
+            float activePower;         // combinated active power for line 1+2+3
+            float reactivePower;       // combinated reactive power for line 1+2+3
+            float apparentPower;       // combinated apparent power for line 1+2+3 , WHEN IT IS "-" POSSITION DOWN
+            float calculatedPower = 0; // combinated calculated power for line 1+2+3
 
             // skipping id & controllerId
             sStr >> id >> controllerId >> dateDtmp;
 
-            for (int i = 0; i < dateDtmp.size(); i++) if (dateDtmp[i] == '/') dateDtmp[i] = ' ';
+            for (size_t i = 0; i < dateDtmp.size(); i++) if (dateDtmp[i] == '/') dateDtmp[i] = ' ';
             std::stringstream sStrDate(dateDtmp);
 
             sStrDate >> day >> month >> year;
 
             sStr >> timeDtmp;
 
-            for (int i = 0; i < timeDtmp.size(); i++) if (timeDtmp[i] == ':') timeDtmp[i] = ' ';
+            for (size_t i = 0; i < timeDtmp.size(); i++) if (timeDtmp[i] == ':') timeDtmp[i] = ' ';
             std::stringstream sStrTime(timeDtmp);
 
             sStrTime >> hour >> minute >> second;
@@ -111,7 +111,7 @@ void operateTXTFile() { // Since sometimes provides me errors when working with 
             sStr >> voltageLine12 >> voltageLine23 >> voltageLine31 >> currentLine1 >> currentLine2 >> currentLine3 >> combinatedPower >> activePower >> reactivePower >> apparentPower;
             //sStr >> calculatedPowtmp;
 
-            int i = newRecords.size();
+            size_t i = newRecords.size();
 
             if (i == 1) {
                 line1tmp = currentLine1;

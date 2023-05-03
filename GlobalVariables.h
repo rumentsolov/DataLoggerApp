@@ -19,7 +19,7 @@ std::string recordFileString = pathStr + recordName;
 
 const char* rawFile = rawFileString.c_str();
 const char* recordFile = recordFileString.c_str();
-const char* inputFile = "https://www.rumentsolov.com/gallery/trend.csv";
+const char* inputFile = "C:\\Users\\rtsol\\OneDrive\\Desktop\\Data.Logger\\trend.csv";
 
 const int startupCurrentFactor = 2;
 

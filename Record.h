@@ -6,33 +6,6 @@
 class Record {
 public:
 
-    /*
-    // My Setters in case I need them
-
-    Record* set_id(const std::string& id);
-    Record* set_controllerId(const int& controllerId);
-    Record* set_year(const int& year);
-    Record* set_month(const std::string& month);
-    Record* set_day(const std::string& day);
-    Record* set_hour(const std::string& hour);
-    Record* set_minute(const std::string& minute);
-    Record* set_second(const std::string& second);
-    Record* set_voltageLine12(const double& voltageLine12);
-    Record* set_voltageLine23(const double& voltageLine23);
-    Record* set_voltageLine31(const double& voltageLine31);
-    Record* set_currentLine1(const double& currentLine1);
-    Record* set_currentLine2(const double& currentLine2);
-    Record* set_currentLine3(const double& currentLine3);
-    Record* set_combinatedPower(const double& combinatedPower);
-    Record* set_activePower(const double& activePower);
-    Record* set_reactivePower(const double& reactivePower);
-    Record* set_apparentPower(const double& apparentPower);
-    Record* set_calculatedPower(const double& calculatedPower);
-
-
-//private:
-*/
-
     std::string id;             // id inside the table controller record
     int controllerId;           // serial number of the record inside the controller
     int year;                   // year record is created
@@ -41,21 +14,21 @@ public:
     std::string hour;           // hour record is created
     std::string minute;         // minute record is created
     std::string second;         // second record is created
-    double voltageLine12;       // voltage between line 1 and 2
-    double voltageLine23;       // voltage between line 2 and 3
-    double voltageLine31;       // voltage between line 3 and 1
-    double currentLine1;        // current in line 1
-    double currentLine2;        // current in line 2
-    double currentLine3;        // current in line 3
-    double combinatedPower;     // combinated power factor for line 1+2+3
-    double activePower;         // active power for line 1+2+3
-    double reactivePower;       // reactive power for line 1+2+3
-    double apparentPower;       // apparent power for line 1+2+3
-    double calculatedPower;     // calculated power for line 1+2+3
+    float voltageLine12;       // voltage between line 1 and 2
+    float voltageLine23;       // voltage between line 2 and 3
+    float voltageLine31;       // voltage between line 3 and 1
+    float currentLine1;        // current in line 1
+    float currentLine2;        // current in line 2
+    float currentLine3;        // current in line 3
+    float combinatedPower;     // combinated power factor for line 1+2+3
+    float activePower;         // active power for line 1+2+3
+    float reactivePower;       // reactive power for line 1+2+3
+    float apparentPower;       // apparent power for line 1+2+3
+    float calculatedPower;     // calculated power for line 1+2+3
 
     Record();
 
-    Record(std::string id, int controllerId, int year, std::string month, std::string day, std::string hour, std::string minute, std::string second, double voltageLine12, double voltageLine23, double voltageLine31, double currentLine1, double currentLine2, double currentLine3, double combinatedPower, double activePower, double reactivePower, double apparentPower, double calculatedPower);
+    Record(std::string id, int controllerId, int year, std::string month, std::string day, std::string hour, std::string minute, std::string second, float voltageLine12, float voltageLine23, float voltageLine31, float currentLine1, float currentLine2, float currentLine3, float combinatedPower, float activePower, float reactivePower, float apparentPower, float calculatedPower);
 
     ~Record() {};
 
@@ -63,7 +36,7 @@ public:
 
 };
 
-Record::Record(std::string id, int controllerId, int year, std::string month, std::string day, std::string hour, std::string minute, std::string second, double voltageLine12, double voltageLine23, double voltageLine31, double currentLine1, double currentLine2, double currentLine3, double combinatedPower, double activePower, double reactivePower, double apparentPower, double calculatedPower) {
+Record::Record(std::string id, int controllerId, int year, std::string month, std::string day, std::string hour, std::string minute, std::string second, float voltageLine12, float voltageLine23, float voltageLine31, float currentLine1, float currentLine2, float currentLine3, float combinatedPower, float activePower, float reactivePower, float apparentPower, float calculatedPower) {
 
     if (id.size() == 3)
         this->id = id;
@@ -71,7 +44,7 @@ Record::Record(std::string id, int controllerId, int year, std::string month, st
         this->id = " " + id;
     else if (id.size() == 1)
         this->id = "  " + id;
-    this->controllerId = controllerId;
+    this->controllerId = controllerId; 
     this->year = year;
     this->month = month;
     this->day = day;

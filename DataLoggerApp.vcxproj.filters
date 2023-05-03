@@ -11,12 +11,12 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="DataCollector.cpp">
+    <ClCompile Include="DataLogger.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="DataCollector.h">
+    <ClInclude Include="DataLogger.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="trend.h">
@@ -38,6 +38,9 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="GlobalVariables.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Hoist.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

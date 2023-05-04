@@ -49,8 +49,8 @@ int run()
 
     ActionSave(rawFileString);
 
-    operateTXTFile(); 
-    
+    operateTXTFile();
+
 
     return 0;
 }

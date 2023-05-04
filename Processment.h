@@ -208,7 +208,7 @@ void operateTXTFile() { // Since sometimes provides me errors when working with 
         apparentPowerAVG << 'W' << std::endl << std::endl;
 
 
-    for (int i = 0; i < newRecords.size(); i++) {
+    for (size_t i = 0; i < newRecords.size(); i++) {
         newRecords[i].valuesSendToStream(osTr);
     }
 

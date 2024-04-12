@@ -82,6 +82,17 @@ namespace DataLoggerApp {
 
 	public: System::Windows::Forms::Label^ crossTMotModel;
 	private: System::Windows::Forms::PictureBox^ pic1;
+	public: System::Windows::Forms::Button^ button1;
+	public: System::Windows::Forms::Button^ button2;
+	public: System::Windows::Forms::Button^ button3;
+	public: System::Windows::Forms::Button^ button4;
+	public: System::Windows::Forms::Button^ button5;
+	public: System::Windows::Forms::Button^ button6;
+	public: System::Windows::Forms::Button^ button7;
+
+
+
+	private:
 	public:
 
 	public:
@@ -151,6 +162,13 @@ namespace DataLoggerApp {
 			this->crossTMotSL = (gcnew System::Windows::Forms::Label());
 			this->crossTMotModel = (gcnew System::Windows::Forms::Label());
 			this->pic1 = (gcnew System::Windows::Forms::PictureBox());
+			this->button1 = (gcnew System::Windows::Forms::Button());
+			this->button2 = (gcnew System::Windows::Forms::Button());
+			this->button3 = (gcnew System::Windows::Forms::Button());
+			this->button4 = (gcnew System::Windows::Forms::Button());
+			this->button5 = (gcnew System::Windows::Forms::Button());
+			this->button6 = (gcnew System::Windows::Forms::Button());
+			this->button7 = (gcnew System::Windows::Forms::Button());
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pic1))->BeginInit();
 			this->SuspendLayout();
 			// 
@@ -184,7 +202,7 @@ namespace DataLoggerApp {
 			this->labAV->AutoSize = true;
 			this->labAV->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
-			this->labAV->Location = System::Drawing::Point(1184, 12);
+			this->labAV->Location = System::Drawing::Point(479, 9);
 			this->labAV->Name = L"labAV";
 			this->labAV->Size = System::Drawing::Size(273, 25);
 			this->labAV->TabIndex = 2;
@@ -195,7 +213,7 @@ namespace DataLoggerApp {
 			this->labAV1->AutoSize = true;
 			this->labAV1->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
-			this->labAV1->Location = System::Drawing::Point(1184, 77);
+			this->labAV1->Location = System::Drawing::Point(479, 74);
 			this->labAV1->Name = L"labAV1";
 			this->labAV1->Size = System::Drawing::Size(228, 25);
 			this->labAV1->TabIndex = 3;
@@ -206,7 +224,7 @@ namespace DataLoggerApp {
 			this->labAV1var->AutoSize = true;
 			this->labAV1var->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
-			this->labAV1var->Location = System::Drawing::Point(1475, 52);
+			this->labAV1var->Location = System::Drawing::Point(770, 49);
 			this->labAV1var->Name = L"labAV1var";
 			this->labAV1var->Size = System::Drawing::Size(19, 25);
 			this->labAV1var->TabIndex = 13;
@@ -217,7 +235,7 @@ namespace DataLoggerApp {
 			this->labAV2->AutoSize = true;
 			this->labAV2->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
-			this->labAV2->Location = System::Drawing::Point(1184, 102);
+			this->labAV2->Location = System::Drawing::Point(479, 99);
 			this->labAV2->Name = L"labAV2";
 			this->labAV2->Size = System::Drawing::Size(228, 25);
 			this->labAV2->TabIndex = 4;
@@ -228,7 +246,7 @@ namespace DataLoggerApp {
 			this->labAV2var->AutoSize = true;
 			this->labAV2var->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
-			this->labAV2var->Location = System::Drawing::Point(1475, 77);
+			this->labAV2var->Location = System::Drawing::Point(770, 74);
 			this->labAV2var->Name = L"labAV2var";
 			this->labAV2var->Size = System::Drawing::Size(19, 25);
 			this->labAV2var->TabIndex = 14;
@@ -239,7 +257,7 @@ namespace DataLoggerApp {
 			this->labAV3->AutoSize = true;
 			this->labAV3->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
-			this->labAV3->Location = System::Drawing::Point(1184, 136);
+			this->labAV3->Location = System::Drawing::Point(479, 133);
 			this->labAV3->Name = L"labAV3";
 			this->labAV3->Size = System::Drawing::Size(231, 25);
 			this->labAV3->TabIndex = 5;
@@ -250,7 +268,7 @@ namespace DataLoggerApp {
 			this->labAV3var->AutoSize = true;
 			this->labAV3var->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
-			this->labAV3var->Location = System::Drawing::Point(1475, 102);
+			this->labAV3var->Location = System::Drawing::Point(770, 99);
 			this->labAV3var->Name = L"labAV3var";
 			this->labAV3var->Size = System::Drawing::Size(19, 25);
 			this->labAV3var->TabIndex = 15;
@@ -261,7 +279,7 @@ namespace DataLoggerApp {
 			this->labAC12->AutoSize = true;
 			this->labAC12->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
-			this->labAC12->Location = System::Drawing::Point(1184, 52);
+			this->labAC12->Location = System::Drawing::Point(479, 49);
 			this->labAC12->Name = L"labAC12";
 			this->labAC12->Size = System::Drawing::Size(228, 25);
 			this->labAC12->TabIndex = 6;
@@ -272,7 +290,7 @@ namespace DataLoggerApp {
 			this->labAC12var->AutoSize = true;
 			this->labAC12var->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
-			this->labAC12var->Location = System::Drawing::Point(1475, 136);
+			this->labAC12var->Location = System::Drawing::Point(770, 133);
 			this->labAC12var->Name = L"labAC12var";
 			this->labAC12var->Size = System::Drawing::Size(19, 25);
 			this->labAC12var->TabIndex = 16;
@@ -283,7 +301,7 @@ namespace DataLoggerApp {
 			this->labAC23->AutoSize = true;
 			this->labAC23->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
-			this->labAC23->Location = System::Drawing::Point(1184, 161);
+			this->labAC23->Location = System::Drawing::Point(479, 158);
 			this->labAC23->Name = L"labAC23";
 			this->labAC23->Size = System::Drawing::Size(231, 25);
 			this->labAC23->TabIndex = 7;
@@ -294,7 +312,7 @@ namespace DataLoggerApp {
 			this->labAC23var->AutoSize = true;
 			this->labAC23var->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
-			this->labAC23var->Location = System::Drawing::Point(1475, 161);
+			this->labAC23var->Location = System::Drawing::Point(770, 158);
 			this->labAC23var->Name = L"labAC23var";
 			this->labAC23var->Size = System::Drawing::Size(19, 25);
 			this->labAC23var->TabIndex = 17;
@@ -305,7 +323,7 @@ namespace DataLoggerApp {
 			this->labAC31->AutoSize = true;
 			this->labAC31->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
-			this->labAC31->Location = System::Drawing::Point(1184, 186);
+			this->labAC31->Location = System::Drawing::Point(479, 183);
 			this->labAC31->Name = L"labAC31";
 			this->labAC31->Size = System::Drawing::Size(231, 25);
 			this->labAC31->TabIndex = 8;
@@ -316,7 +334,7 @@ namespace DataLoggerApp {
 			this->labAC31var->AutoSize = true;
 			this->labAC31var->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
-			this->labAC31var->Location = System::Drawing::Point(1475, 182);
+			this->labAC31var->Location = System::Drawing::Point(770, 179);
 			this->labAC31var->Name = L"labAC31var";
 			this->labAC31var->Size = System::Drawing::Size(19, 25);
 			this->labAC31var->TabIndex = 18;
@@ -327,7 +345,7 @@ namespace DataLoggerApp {
 			this->labAComb->AutoSize = true;
 			this->labAComb->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
-			this->labAComb->Location = System::Drawing::Point(1184, 231);
+			this->labAComb->Location = System::Drawing::Point(479, 265);
 			this->labAComb->Name = L"labAComb";
 			this->labAComb->Size = System::Drawing::Size(265, 25);
 			this->labAComb->TabIndex = 9;
@@ -338,7 +356,7 @@ namespace DataLoggerApp {
 			this->labACombvar->AutoSize = true;
 			this->labACombvar->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
-			this->labACombvar->Location = System::Drawing::Point(1475, 231);
+			this->labACombvar->Location = System::Drawing::Point(770, 265);
 			this->labACombvar->Name = L"labACombvar";
 			this->labACombvar->Size = System::Drawing::Size(19, 25);
 			this->labACombvar->TabIndex = 19;
@@ -349,7 +367,7 @@ namespace DataLoggerApp {
 			this->labAAct->AutoSize = true;
 			this->labAAct->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
-			this->labAAct->Location = System::Drawing::Point(1184, 256);
+			this->labAAct->Location = System::Drawing::Point(479, 319);
 			this->labAAct->Name = L"labAAct";
 			this->labAAct->Size = System::Drawing::Size(207, 25);
 			this->labAAct->TabIndex = 10;
@@ -360,7 +378,7 @@ namespace DataLoggerApp {
 			this->labAActvar->AutoSize = true;
 			this->labAActvar->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
-			this->labAActvar->Location = System::Drawing::Point(1475, 256);
+			this->labAActvar->Location = System::Drawing::Point(770, 319);
 			this->labAActvar->Name = L"labAActvar";
 			this->labAActvar->Size = System::Drawing::Size(19, 25);
 			this->labAActvar->TabIndex = 20;
@@ -371,44 +389,48 @@ namespace DataLoggerApp {
 			this->labAReact->AutoSize = true;
 			this->labAReact->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
-			this->labAReact->Location = System::Drawing::Point(1184, 281);
+			this->labAReact->Location = System::Drawing::Point(479, 360);
 			this->labAReact->Name = L"labAReact";
 			this->labAReact->Size = System::Drawing::Size(232, 25);
 			this->labAReact->TabIndex = 11;
 			this->labAReact->Text = L"ÐÅÀÊÒÈÂÍÀ ÌÎÙÍÎÑÒ";
+			this->labAReact->Click += gcnew System::EventHandler(this, &DataLogger::labAReact_Click);
 			// 
 			// labAReactvar
 			// 
 			this->labAReactvar->AutoSize = true;
 			this->labAReactvar->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
-			this->labAReactvar->Location = System::Drawing::Point(1475, 281);
+			this->labAReactvar->Location = System::Drawing::Point(770, 360);
 			this->labAReactvar->Name = L"labAReactvar";
 			this->labAReactvar->Size = System::Drawing::Size(19, 25);
 			this->labAReactvar->TabIndex = 21;
 			this->labAReactvar->Text = L"-";
+			this->labAReactvar->Click += gcnew System::EventHandler(this, &DataLogger::labAReactvar_Click);
 			// 
 			// labAApp
 			// 
 			this->labAApp->AutoSize = true;
 			this->labAApp->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
-			this->labAApp->Location = System::Drawing::Point(1184, 306);
+			this->labAApp->Location = System::Drawing::Point(479, 414);
 			this->labAApp->Name = L"labAApp";
 			this->labAApp->Size = System::Drawing::Size(239, 25);
 			this->labAApp->TabIndex = 12;
 			this->labAApp->Text = L"ÏÐÈÂÅÄÅÍÀ ÌÎÙÍÎÑÒ";
+			this->labAApp->Click += gcnew System::EventHandler(this, &DataLogger::labAApp_Click);
 			// 
 			// labAAppvar
 			// 
 			this->labAAppvar->AutoSize = true;
 			this->labAAppvar->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
-			this->labAAppvar->Location = System::Drawing::Point(1475, 306);
+			this->labAAppvar->Location = System::Drawing::Point(770, 414);
 			this->labAAppvar->Name = L"labAAppvar";
 			this->labAAppvar->Size = System::Drawing::Size(19, 25);
 			this->labAAppvar->TabIndex = 22;
 			this->labAAppvar->Text = L"-";
+			this->labAAppvar->Click += gcnew System::EventHandler(this, &DataLogger::labAAppvar_Click);
 			// 
 			// labSN
 			// 
@@ -426,7 +448,7 @@ namespace DataLoggerApp {
 			this->textBox1->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12));
 			this->textBox1->Location = System::Drawing::Point(9, 46);
 			this->textBox1->Name = L"textBox1";
-			this->textBox1->Size = System::Drawing::Size(259, 30);
+			this->textBox1->Size = System::Drawing::Size(221, 30);
 			this->textBox1->TabIndex = 24;
 			// 
 			// labHmodel
@@ -515,7 +537,7 @@ namespace DataLoggerApp {
 			this->crossTMotLogo->AutoSize = true;
 			this->crossTMotLogo->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
-			this->crossTMotLogo->Location = System::Drawing::Point(1184, 390);
+			this->crossTMotLogo->Location = System::Drawing::Point(5, 528);
 			this->crossTMotLogo->Name = L"crossTMotLogo";
 			this->crossTMotLogo->Size = System::Drawing::Size(180, 25);
 			this->crossTMotLogo->TabIndex = 34;
@@ -526,7 +548,7 @@ namespace DataLoggerApp {
 			this->crossTMotSL->AutoSize = true;
 			this->crossTMotSL->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
-			this->crossTMotSL->Location = System::Drawing::Point(1184, 465);
+			this->crossTMotSL->Location = System::Drawing::Point(5, 603);
 			this->crossTMotSL->Name = L"crossTMotSL";
 			this->crossTMotSL->Size = System::Drawing::Size(19, 25);
 			this->crossTMotSL->TabIndex = 33;
@@ -538,7 +560,7 @@ namespace DataLoggerApp {
 			this->crossTMotModel->AutoSize = true;
 			this->crossTMotModel->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
-			this->crossTMotModel->Location = System::Drawing::Point(1184, 424);
+			this->crossTMotModel->Location = System::Drawing::Point(5, 562);
 			this->crossTMotModel->Name = L"crossTMotModel";
 			this->crossTMotModel->Size = System::Drawing::Size(228, 25);
 			this->crossTMotModel->TabIndex = 32;
@@ -547,19 +569,113 @@ namespace DataLoggerApp {
 			// pic1
 			// 
 			this->pic1->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"pic1.Image")));
-			this->pic1->Location = System::Drawing::Point(1242, 602);
+			this->pic1->Location = System::Drawing::Point(484, 513);
 			this->pic1->Name = L"pic1";
-			this->pic1->Size = System::Drawing::Size(122, 114);
+			this->pic1->Size = System::Drawing::Size(210, 200);
 			this->pic1->SizeMode = System::Windows::Forms::PictureBoxSizeMode::StretchImage;
 			this->pic1->TabIndex = 35;
 			this->pic1->TabStop = false;
+			// 
+			// button1
+			// 
+			this->button1->BackColor = System::Drawing::Color::Aquamarine;
+			this->button1->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 13.8F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(204)));
+			this->button1->Location = System::Drawing::Point(248, 43);
+			this->button1->Name = L"button1";
+			this->button1->Size = System::Drawing::Size(166, 37);
+			this->button1->TabIndex = 36;
+			this->button1->Text = L"ÏÐÎÂÅÐÈ";
+			this->button1->UseVisualStyleBackColor = false;
+			// 
+			// button2
+			// 
+			this->button2->BackColor = System::Drawing::Color::Yellow;
+			this->button2->Font = (gcnew System::Drawing::Font(L"Consolas", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(204)));
+			this->button2->Location = System::Drawing::Point(817, 43);
+			this->button2->Name = L"button2";
+			this->button2->Size = System::Drawing::Size(132, 81);
+			this->button2->TabIndex = 37;
+			this->button2->Text = L"ÃÐÀÔÈÊÀ";
+			this->button2->UseVisualStyleBackColor = false;
+			this->button2->Click += gcnew System::EventHandler(this, &DataLogger::button2_Click);
+			// 
+			// button3
+			// 
+			this->button3->BackColor = System::Drawing::Color::Yellow;
+			this->button3->Font = (gcnew System::Drawing::Font(L"Consolas", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(204)));
+			this->button3->Location = System::Drawing::Point(817, 130);
+			this->button3->Name = L"button3";
+			this->button3->Size = System::Drawing::Size(132, 74);
+			this->button3->TabIndex = 38;
+			this->button3->Text = L"ÃÐÀÔÈÊÀ";
+			this->button3->UseVisualStyleBackColor = false;
+			// 
+			// button4
+			// 
+			this->button4->BackColor = System::Drawing::Color::Yellow;
+			this->button4->Font = (gcnew System::Drawing::Font(L"Consolas", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(204)));
+			this->button4->Location = System::Drawing::Point(817, 263);
+			this->button4->Name = L"button4";
+			this->button4->Size = System::Drawing::Size(132, 30);
+			this->button4->TabIndex = 39;
+			this->button4->Text = L"ÃÐÀÔÈÊÀ";
+			this->button4->UseVisualStyleBackColor = false;
+			// 
+			// button5
+			// 
+			this->button5->BackColor = System::Drawing::Color::Yellow;
+			this->button5->Font = (gcnew System::Drawing::Font(L"Consolas", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(204)));
+			this->button5->Location = System::Drawing::Point(817, 317);
+			this->button5->Name = L"button5";
+			this->button5->Size = System::Drawing::Size(132, 30);
+			this->button5->TabIndex = 40;
+			this->button5->Text = L"ÃÐÀÔÈÊÀ";
+			this->button5->UseVisualStyleBackColor = false;
+			// 
+			// button6
+			// 
+			this->button6->BackColor = System::Drawing::Color::Yellow;
+			this->button6->Font = (gcnew System::Drawing::Font(L"Consolas", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(204)));
+			this->button6->Location = System::Drawing::Point(817, 363);
+			this->button6->Name = L"button6";
+			this->button6->Size = System::Drawing::Size(132, 30);
+			this->button6->TabIndex = 41;
+			this->button6->Text = L"ÃÐÀÔÈÊÀ";
+			this->button6->UseVisualStyleBackColor = false;
+			this->button6->Click += gcnew System::EventHandler(this, &DataLogger::button6_Click);
+			// 
+			// button7
+			// 
+			this->button7->BackColor = System::Drawing::Color::Yellow;
+			this->button7->Font = (gcnew System::Drawing::Font(L"Consolas", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(204)));
+			this->button7->Location = System::Drawing::Point(817, 412);
+			this->button7->Name = L"button7";
+			this->button7->Size = System::Drawing::Size(132, 30);
+			this->button7->TabIndex = 42;
+			this->button7->Text = L"ÃÐÀÔÈÊÀ";
+			this->button7->UseVisualStyleBackColor = false;
+			this->button7->Click += gcnew System::EventHandler(this, &DataLogger::button7_Click);
 			// 
 			// DataLogger
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(8, 16);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->BackColor = System::Drawing::Color::White;
-			this->ClientSize = System::Drawing::Size(1852, 768);
+			this->ClientSize = System::Drawing::Size(1045, 768);
+			this->Controls->Add(this->button7);
+			this->Controls->Add(this->button6);
+			this->Controls->Add(this->button5);
+			this->Controls->Add(this->button4);
+			this->Controls->Add(this->button3);
+			this->Controls->Add(this->button2);
+			this->Controls->Add(this->button1);
 			this->Controls->Add(this->pic1);
 			this->Controls->Add(this->crossTMotLogo);
 			this->Controls->Add(this->crossTMotSL);
@@ -597,7 +713,8 @@ namespace DataLoggerApp {
 			this->Controls->Add(this->btnSTART);
 			this->Controls->Add(this->btnSTOP);
 			this->Name = L"DataLogger";
-			this->Text = L"DataLogger";
+			this->RightToLeftLayout = true;
+			this->Text = L"ÄÈÏËÎÌÍÀ ÐÀÁÎÒÀ ÍÀ ÐÓÌÅÍ ÖÎËÎÂ - ÒÓ ÃÀÁÐÎÂÎ";
 			this->Load += gcnew System::EventHandler(this, &DataLogger::DataLogger_Load);
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pic1))->EndInit();
 			this->ResumeLayout(false);
@@ -640,7 +757,21 @@ namespace DataLoggerApp {
 	}
 	private: System::Void DataLogger_Load(System::Object^ sender, System::EventArgs^ e) {
 	}
-	};
+	private: System::Void button2_Click(System::Object^ sender, System::EventArgs^ e) {
+	}
+private: System::Void labAReact_Click(System::Object^ sender, System::EventArgs^ e) {
+}
+private: System::Void button6_Click(System::Object^ sender, System::EventArgs^ e) {
+}
+private: System::Void labAAppvar_Click(System::Object^ sender, System::EventArgs^ e) {
+}
+private: System::Void labAReactvar_Click(System::Object^ sender, System::EventArgs^ e) {
+}
+private: System::Void labAApp_Click(System::Object^ sender, System::EventArgs^ e) {
+}
+private: System::Void button7_Click(System::Object^ sender, System::EventArgs^ e) {
+}
+};
 }
 
 #endif 

@@ -3,6 +3,8 @@
 using namespace System;
 using namespace System::Windows::Forms;
 
+// Version 0.003
+
 int main(array<String^>^ arr) {
 
 	Application::EnableVisualStyles();

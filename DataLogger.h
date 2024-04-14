@@ -4,6 +4,7 @@
 #include <windows.h>
 #include "ActionLogger.h"
 #include "trend.h"
+#include "ReadHoists.h"
 
 namespace DataLoggerApp {
 
@@ -587,6 +588,7 @@ namespace DataLoggerApp {
 			this->button1->TabIndex = 36;
 			this->button1->Text = L"ÏÐÎÂÅÐÈ";
 			this->button1->UseVisualStyleBackColor = false;
+			this->button1->Click += gcnew System::EventHandler(this, &DataLogger::button1_Click);
 			// 
 			// button2
 			// 
@@ -770,6 +772,13 @@ private: System::Void labAReactvar_Click(System::Object^ sender, System::EventAr
 private: System::Void labAApp_Click(System::Object^ sender, System::EventArgs^ e) {
 }
 private: System::Void button7_Click(System::Object^ sender, System::EventArgs^ e) {
+}
+private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e) {
+
+	
+
+
+	//MessageBox::Show("Job done!");
 }
 };
 }

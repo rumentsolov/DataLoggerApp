@@ -43,5 +43,8 @@
     <ClInclude Include="Hoist.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="ReadHoists.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

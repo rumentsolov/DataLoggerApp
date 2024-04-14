@@ -48,6 +48,7 @@ void operateTXTFile() { // Since sometimes provides me errors when working with 
    
    ActionSave(recordFileString);
 
+
     std::vector<Record> newRecords; // the records will be stored as objecs here in this vector for easy work
 
     int counter = 0; // counts the rows readed from the input file

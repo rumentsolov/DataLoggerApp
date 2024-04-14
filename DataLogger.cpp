@@ -3,10 +3,11 @@
 using namespace System;
 using namespace System::Windows::Forms;
 
-// Version 0.003
+//! Version 0.245
 
 int main(array<String^>^ arr) {
 
+	ReadH();
 	Application::EnableVisualStyles();
 	Application::SetCompatibleTextRenderingDefault(false);
 	DataLoggerApp::DataLogger frm;

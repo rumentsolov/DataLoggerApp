@@ -30,7 +30,7 @@ void ActionSave(std::string buff) {
     }
     else
     {
-
+        std::cout << currentDateTime() << "  " << buff << "\n";
         myLogger << currentDateTime() << "  " << buff << "\n";
         myLogger.close();
     }

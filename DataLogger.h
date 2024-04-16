@@ -91,8 +91,6 @@ namespace DataLoggerApp {
 	public: System::Windows::Forms::Button^ button6;
 	public: System::Windows::Forms::Button^ button7;
 
-
-
 	private:
 	public:
 
@@ -448,9 +446,11 @@ namespace DataLoggerApp {
 			// 
 			this->textBox1->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12));
 			this->textBox1->Location = System::Drawing::Point(9, 46);
+			this->textBox1->MaxLength = 12;
 			this->textBox1->Name = L"textBox1";
 			this->textBox1->Size = System::Drawing::Size(221, 30);
 			this->textBox1->TabIndex = 24;
+
 			// 
 			// labHmodel
 			// 
@@ -761,25 +761,31 @@ namespace DataLoggerApp {
 	}
 	private: System::Void button2_Click(System::Object^ sender, System::EventArgs^ e) {
 	}
-private: System::Void labAReact_Click(System::Object^ sender, System::EventArgs^ e) {
-}
-private: System::Void button6_Click(System::Object^ sender, System::EventArgs^ e) {
-}
-private: System::Void labAAppvar_Click(System::Object^ sender, System::EventArgs^ e) {
-}
-private: System::Void labAReactvar_Click(System::Object^ sender, System::EventArgs^ e) {
-}
-private: System::Void labAApp_Click(System::Object^ sender, System::EventArgs^ e) {
-}
-private: System::Void button7_Click(System::Object^ sender, System::EventArgs^ e) {
-}
-private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e) {
+	private: System::Void labAReact_Click(System::Object^ sender, System::EventArgs^ e) {
+	}
+	private: System::Void button6_Click(System::Object^ sender, System::EventArgs^ e) {
+	}
+	private: System::Void labAAppvar_Click(System::Object^ sender, System::EventArgs^ e) {
+	}
+	private: System::Void labAReactvar_Click(System::Object^ sender, System::EventArgs^ e) {
+	}
+	private: System::Void labAApp_Click(System::Object^ sender, System::EventArgs^ e) {
+	}
+	private: System::Void button7_Click(System::Object^ sender, System::EventArgs^ e) {
+	}
+	private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e) {
 
-	
+		String^ buffer = this->textBox1->Text;
+		for (int i = 0; i < Hoists.size(); i++) {
 
+			if (Hoists[i].HoistNO.ToString() == buffer) {
+				this->textBox1->Text += "||";
+				MessageBox::Show("Found!");
+			}
+		}
 
-	//MessageBox::Show("Job done!");
-}
+	}
+
 };
 }
 

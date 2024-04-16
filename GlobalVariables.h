@@ -7,6 +7,11 @@
 #include <vector>
 #include <string>
 #include "GetDesktopPath.h"
+#include "Hoist.h"
+
+
+std::vector<Hoist> Hoists;
+
 
 std::string  deskTopPath = GetDTPath();
 std::string  pathStr = deskTopPath.c_str();
@@ -25,7 +30,7 @@ const char* recordFile = recordFileString.c_str();
 
 const int startupCurrentFactor = 2;
 
-std::vector<Hoist> Hoists;
+
 
 //std::vector<Hoist> Hoists;
 

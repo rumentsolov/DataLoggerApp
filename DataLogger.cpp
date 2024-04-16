@@ -3,7 +3,7 @@
 using namespace System;
 using namespace System::Windows::Forms;
 
-//! Version 0.246
+//! Version 0.247
 
 int main(array<String^>^ arr) {
 	std::cout << "Hi!" << std::endl;

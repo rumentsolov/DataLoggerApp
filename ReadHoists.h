@@ -23,6 +23,7 @@ using namespace System::Windows::Forms;
 
 void operateHoistFile() { // Since sometimes provides me errors when working with csv file I anyway have to create raw text file by requirements and I use that file to analyze the data
 
+    
 
     int counter = 0; // counts the rows readed from the input file
 
@@ -37,10 +38,11 @@ void operateHoistFile() { // Since sometimes provides me errors when working wit
 
     while (getline(hoistTxtFile, line)) // its easy and better to read  and process with my own txt file 
     {
-        counter++;
-        if (counter > 2) { // skipping first 2 rows from file
 
             for (size_t i = 0; i < line.size(); i++) if (line[i] == ',') line[i] = ' ';
+
+
+            
 
             int         HoistNO;
             std::string      HoistSalesDescription;
@@ -84,78 +86,95 @@ void operateHoistFile() { // Since sometimes provides me errors when working wit
             std::string      C1stPole;
             std::string      C2ndPole;
 
-
-            // skipping id & controllerId
-            sStr >> id >> controllerId >> dateDtmp;
-
-            for (size_t i = 0; i < dateDtmp.size(); i++) if (dateDtmp[i] == '/') dateDtmp[i] = ' ';
-            std::stringstream sStrDate(dateDtmp);
-
-            sStrDate >> day >> month >> year;
-
-            sStr >> timeDtmp;
-
-            for (size_t i = 0; i < timeDtmp.size(); i++) if (timeDtmp[i] == ':') timeDtmp[i] = ' ';
-            std::stringstream sStrTime(timeDtmp);
-
-            sStrTime >> hour >> minute >> second;
-
-            sStr.precision(2);
-
-            sStr >> voltageLine12 >> voltageLine23 >> voltageLine31 >> currentLine1 >> currentLine2 >> currentLine3 >> combinatedPower >> activePower >> reactivePower >> apparentPower;
-            //sStr >> calculatedPowtmp;
-
-            size_t i = newRecords.size();
-
-            if (i == 1) {
-                line1tmp = currentLine1;
-                line2tmp = currentLine2;
-                line3tmp = currentLine3;
-            }
-
-            if (
-                line1tmp * startupCurrentFactor > currentLine1 &&
-                line2tmp * startupCurrentFactor > currentLine2 &&
-                line3tmp * startupCurrentFactor > currentLine3 &&
-
-                line1tmp / startupCurrentFactor < currentLine1 &&
-                line2tmp / startupCurrentFactor < currentLine2 &&
-                line3tmp / startupCurrentFactor < currentLine3
-                )
-            {
-
-                if (currentLine1 != 0.00 && currentLine2 != 0.00 && currentLine3 != 0.00 && startUpCurrent >= 1)
-                {
-                    Record curRecord(id, controllerId, year, month, day, hour, minute, second, voltageLine12, voltageLine23, voltageLine31, currentLine1, currentLine2, currentLine3, combinatedPower, activePower, reactivePower, apparentPower, 0);
-                    startUpCurrent++;
-                    newRecords.push_back(curRecord);
-                }
-                else if (currentLine1 == 0.00 && currentLine2 == 0.00 && currentLine3 == 0.00)
-                    startUpCurrent = 0;
-                else if (currentLine1 != 0.00 && currentLine2 != 0.00 && currentLine3 != 0.00 && startUpCurrent == 0)
-                    startUpCurrent++;
+            hoistTxtFile >>
+                HoistNO >>
+                HoistSalesDescription >>
+                Tons >>
+                Meters >>
+                FEM >>
+                SERIE >>
+                ROLLZ >>
+                RopeD >>
+                TYPE >>
+                LSp >>
+                LSp2 >>
+                CtSp >>
+                CtSp2 >>
+                CTpcs >>
+                OVR >>
+                LMModel >>
+                LType >>
+                LNomI >>
+                L1stkW >>
+                L2ndkW >>
+                LVoltage >>
+                LSPEED >>
+                LIP >>
+                LMODEL2 >>
+                LBRAKE >>
+                LFR >>
+                L1stPole >>
+                L2ndPole >>
+                CMModel >>
+                CType >>
+                CNomI >>
+                C1stkW >>
+                C2ndkW >>
+                CVoltage >>
+                CSPEED >>
+                CIP >>
+                CMODEL2 >>
+                CBRAKE >>
+                CFR >>
+                C1stPole >>
+                C2ndPole;
 
 
-                voltageLine12AVG += voltageLine12;
-                voltageLine23AVG += voltageLine23;
-                voltageLine31AVG += voltageLine31;
+            Hoist Buff(
+                HoistNO ,
+                HoistSalesDescription ,
+                Tons ,
+                Meters ,
+                FEM ,
+                SERIE ,
+                ROLLZ ,
+                RopeD ,
+                TYPE ,
+                LSp ,
+                LSp2 ,
+                CtSp ,
+                CtSp2 ,
+                CTpcs ,
+                OVR ,
+                LMModel ,
+                LType ,
+                LNomI ,
+                L1stkW ,
+                L2ndkW ,
+                LVoltage ,
+                LSPEED ,
+                LIP ,
+                LMODEL2 ,
+                LBRAKE ,
+                LFR ,
+                L1stPole ,
+                L2ndPole ,
+                CMModel,
+                CType ,
+                CNomI ,
+                C1stkW ,
+                C2ndkW ,
+                CVoltage,
+                CSPEED ,
+                CIP ,
+                CMODEL2 ,
+                CBRAKE ,
+                CFR ,
+                C1stPole ,
+                C2ndPole
+            );
 
-                currentLine1AVG += currentLine1;
-                currentLine2AVG += currentLine2;
-                currentLine3AVG += currentLine3;
-
-                line1tmp = currentLine1;
-                line2tmp = currentLine2;
-                line3tmp = currentLine3;
-
-
-                combinatedPowerAVG += combinatedPower;
-                activePowerAVG += activePower;
-                reactivePowerAVG += reactivePower;
-                apparentPowerAVG += apparentPower;
-            }
-
-
+            Hoists.push_back(Buff);
         }
     }
 

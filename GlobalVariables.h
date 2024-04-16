@@ -25,6 +25,7 @@ const char* recordFile = recordFileString.c_str();
 
 const int startupCurrentFactor = 2;
 
+std::vector<Hoist> Hoists;
 
 //std::vector<Hoist> Hoists;
 

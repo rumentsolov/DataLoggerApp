@@ -3,10 +3,10 @@
 using namespace System;
 using namespace System::Windows::Forms;
 
-//! Version 0.245
+//! Version 0.246
 
 int main(array<String^>^ arr) {
-
+	std::cout << "Hi!" << std::endl;
 	ReadH();
 	Application::EnableVisualStyles();
 	Application::SetCompatibleTextRenderingDefault(false);

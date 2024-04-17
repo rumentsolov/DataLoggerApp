@@ -84,7 +84,9 @@ namespace DataLoggerApp
 		public: System::Windows::Forms::Label^ crossTMotSL;
 
 		public: System::Windows::Forms::Label^ crossTMotModel;
-		private: System::Windows::Forms::PictureBox^ pic1;
+	private: System::Windows::Forms::PictureBox^ TUGAB;
+	public:
+
 		public: System::Windows::Forms::Button^ button1;
 		public: System::Windows::Forms::Button^ button2;
 		public: System::Windows::Forms::Button^ button3;
@@ -92,6 +94,18 @@ namespace DataLoggerApp
 		public: System::Windows::Forms::Button^ button5;
 		public: System::Windows::Forms::Button^ button6;
 		public: System::Windows::Forms::Button^ button7;
+	public: System::Windows::Forms::Label^ HeadRoomLabel;
+	public: System::Windows::Forms::Label^ HeadRoomLabel2;
+	public: System::Windows::Forms::Label^ FemLabel1;
+	public: System::Windows::Forms::Label^ FemLabel2;
+	private: System::Windows::Forms::PictureBox^ HOISTPIC;
+	public:
+
+	public:
+
+
+
+
 
 		private:
 		/// <summary>
@@ -139,7 +153,7 @@ namespace DataLoggerApp
 			this->crossTMotLogo = (gcnew System::Windows::Forms::Label());
 			this->crossTMotSL = (gcnew System::Windows::Forms::Label());
 			this->crossTMotModel = (gcnew System::Windows::Forms::Label());
-			this->pic1 = (gcnew System::Windows::Forms::PictureBox());
+			this->TUGAB = (gcnew System::Windows::Forms::PictureBox());
 			this->button1 = (gcnew System::Windows::Forms::Button());
 			this->button2 = (gcnew System::Windows::Forms::Button());
 			this->button3 = (gcnew System::Windows::Forms::Button());
@@ -147,7 +161,13 @@ namespace DataLoggerApp
 			this->button5 = (gcnew System::Windows::Forms::Button());
 			this->button6 = (gcnew System::Windows::Forms::Button());
 			this->button7 = (gcnew System::Windows::Forms::Button());
-			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pic1))->BeginInit();
+			this->HeadRoomLabel = (gcnew System::Windows::Forms::Label());
+			this->HeadRoomLabel2 = (gcnew System::Windows::Forms::Label());
+			this->FemLabel1 = (gcnew System::Windows::Forms::Label());
+			this->FemLabel2 = (gcnew System::Windows::Forms::Label());
+			this->HOISTPIC = (gcnew System::Windows::Forms::PictureBox());
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->TUGAB))->BeginInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->HOISTPIC))->BeginInit();
 			this->SuspendLayout();
 			// 
 			// btnSTOP
@@ -429,16 +449,15 @@ namespace DataLoggerApp
 			this->textBox1->Name = L"textBox1";
 			this->textBox1->Size = System::Drawing::Size(221, 30);
 			this->textBox1->TabIndex = 24;
-
 			// 
 			// labHmodel
 			// 
 			this->labHmodel->AutoSize = true;
-			this->labHmodel->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+			this->labHmodel->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
 			this->labHmodel->Location = System::Drawing::Point(12, 186);
 			this->labHmodel->Name = L"labHmodel";
-			this->labHmodel->Size = System::Drawing::Size(107, 25);
+			this->labHmodel->Size = System::Drawing::Size(115, 25);
 			this->labHmodel->TabIndex = 25;
 			this->labHmodel->Text = L"ÒÅËÔÅÐ :";
 			// 
@@ -447,7 +466,7 @@ namespace DataLoggerApp
 			this->labHmodel2->AutoSize = true;
 			this->labHmodel2->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
-			this->labHmodel2->Location = System::Drawing::Point(12, 217);
+			this->labHmodel2->Location = System::Drawing::Point(133, 186);
 			this->labHmodel2->Name = L"labHmodel2";
 			this->labHmodel2->Size = System::Drawing::Size(19, 25);
 			this->labHmodel2->TabIndex = 26;
@@ -459,18 +478,18 @@ namespace DataLoggerApp
 			this->labHProdNum->AutoSize = true;
 			this->labHProdNum->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
-			this->labHProdNum->Location = System::Drawing::Point(12, 265);
+			this->labHProdNum->Location = System::Drawing::Point(15, 263);
 			this->labHProdNum->Name = L"labHProdNum";
-			this->labHProdNum->Size = System::Drawing::Size(206, 25);
+			this->labHProdNum->Size = System::Drawing::Size(112, 25);
 			this->labHProdNum->TabIndex = 27;
-			this->labHProdNum->Text = L"ÏÐÎÄÓÊÒÎÂ ÊÎÄ ¹";
+			this->labHProdNum->Text = L"ÑÅÐÈß ¹ :";
 			// 
 			// labHProdNum2
 			// 
 			this->labHProdNum2->AutoSize = true;
 			this->labHProdNum2->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
-			this->labHProdNum2->Location = System::Drawing::Point(12, 306);
+			this->labHProdNum2->Location = System::Drawing::Point(15, 288);
 			this->labHProdNum2->Name = L"labHProdNum2";
 			this->labHProdNum2->Size = System::Drawing::Size(19, 25);
 			this->labHProdNum2->TabIndex = 28;
@@ -481,7 +500,7 @@ namespace DataLoggerApp
 			this->liftMotSL->AutoSize = true;
 			this->liftMotSL->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
-			this->liftMotSL->Location = System::Drawing::Point(12, 465);
+			this->liftMotSL->Location = System::Drawing::Point(12, 624);
 			this->liftMotSL->Name = L"liftMotSL";
 			this->liftMotSL->Size = System::Drawing::Size(19, 25);
 			this->liftMotSL->TabIndex = 30;
@@ -493,42 +512,42 @@ namespace DataLoggerApp
 			this->liftMmodel->AutoSize = true;
 			this->liftMmodel->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
-			this->liftMmodel->Location = System::Drawing::Point(12, 424);
+			this->liftMmodel->Location = System::Drawing::Point(12, 590);
 			this->liftMmodel->Name = L"liftMmodel";
-			this->liftMmodel->Size = System::Drawing::Size(230, 25);
+			this->liftMmodel->Size = System::Drawing::Size(241, 25);
 			this->liftMmodel->TabIndex = 29;
-			this->liftMmodel->Text = L"Ìîäåë ïîäåìåí ìîòîð";
+			this->liftMmodel->Text = L"Ìîäåë ïîäåìåí ìîòîð :";
 			// 
 			// liftMLogo
 			// 
 			this->liftMLogo->AutoEllipsis = true;
 			this->liftMLogo->AutoSize = true;
-			this->liftMLogo->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+			this->liftMLogo->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
-			this->liftMLogo->Location = System::Drawing::Point(12, 390);
+			this->liftMLogo->Location = System::Drawing::Point(12, 556);
 			this->liftMLogo->Name = L"liftMLogo";
-			this->liftMLogo->Size = System::Drawing::Size(188, 25);
+			this->liftMLogo->Size = System::Drawing::Size(234, 25);
 			this->liftMLogo->TabIndex = 31;
-			this->liftMLogo->Text = L"ÏÎÄÅÌÅÍ ÌÎÒÎÐ";
+			this->liftMLogo->Text = L"ÏÎÄÅÌÍÀ ÌÎÙÍÎÑÒ";
 			// 
 			// crossTMotLogo
 			// 
 			this->crossTMotLogo->AutoEllipsis = true;
 			this->crossTMotLogo->AutoSize = true;
-			this->crossTMotLogo->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+			this->crossTMotLogo->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
-			this->crossTMotLogo->Location = System::Drawing::Point(5, 528);
+			this->crossTMotLogo->Location = System::Drawing::Point(7, 668);
 			this->crossTMotLogo->Name = L"crossTMotLogo";
-			this->crossTMotLogo->Size = System::Drawing::Size(180, 25);
+			this->crossTMotLogo->Size = System::Drawing::Size(204, 25);
 			this->crossTMotLogo->TabIndex = 34;
-			this->crossTMotLogo->Text = L"ÕÎÄÎÂ ÌÎÒÎÐ/È";
+			this->crossTMotLogo->Text = L"ÕÎÄÎÂ ÌÎÙÍÎÑÒ";
 			// 
 			// crossTMotSL
 			// 
 			this->crossTMotSL->AutoSize = true;
 			this->crossTMotSL->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
-			this->crossTMotSL->Location = System::Drawing::Point(5, 603);
+			this->crossTMotSL->Location = System::Drawing::Point(7, 727);
 			this->crossTMotSL->Name = L"crossTMotSL";
 			this->crossTMotSL->Size = System::Drawing::Size(19, 25);
 			this->crossTMotSL->TabIndex = 33;
@@ -540,21 +559,22 @@ namespace DataLoggerApp
 			this->crossTMotModel->AutoSize = true;
 			this->crossTMotModel->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
-			this->crossTMotModel->Location = System::Drawing::Point(5, 562);
+			this->crossTMotModel->Location = System::Drawing::Point(7, 702);
 			this->crossTMotModel->Name = L"crossTMotModel";
-			this->crossTMotModel->Size = System::Drawing::Size(228, 25);
+			this->crossTMotModel->Size = System::Drawing::Size(239, 25);
 			this->crossTMotModel->TabIndex = 32;
-			this->crossTMotModel->Text = L"Ìîäåë õîäîâè ìîòîð/è";
+			this->crossTMotModel->Text = L"Ìîäåë õîäîâè ìîòîð/è :";
 			// 
-			// pic1
+			// TUGAB
 			// 
-			this->pic1->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"pic1.Image")));
-			this->pic1->Location = System::Drawing::Point(484, 513);
-			this->pic1->Name = L"pic1";
-			this->pic1->Size = System::Drawing::Size(210, 200);
-			this->pic1->SizeMode = System::Windows::Forms::PictureBoxSizeMode::StretchImage;
-			this->pic1->TabIndex = 35;
-			this->pic1->TabStop = false;
+			this->TUGAB->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"TUGAB.Image")));
+			this->TUGAB->InitialImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"TUGAB.InitialImage")));
+			this->TUGAB->Location = System::Drawing::Point(823, 556);
+			this->TUGAB->Name = L"TUGAB";
+			this->TUGAB->Size = System::Drawing::Size(210, 200);
+			this->TUGAB->SizeMode = System::Windows::Forms::PictureBoxSizeMode::StretchImage;
+			this->TUGAB->TabIndex = 35;
+			this->TUGAB->TabStop = false;
 			// 
 			// button1
 			// 
@@ -644,12 +664,72 @@ namespace DataLoggerApp
 			this->button7->UseVisualStyleBackColor = false;
 			this->button7->Click += gcnew System::EventHandler(this, &DataLogger::button7_Click);
 			// 
+			// HeadRoomLabel
+			// 
+			this->HeadRoomLabel->AutoEllipsis = true;
+			this->HeadRoomLabel->AutoSize = true;
+			this->HeadRoomLabel->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(204)));
+			this->HeadRoomLabel->Location = System::Drawing::Point(12, 484);
+			this->HeadRoomLabel->Name = L"HeadRoomLabel";
+			this->HeadRoomLabel->Size = System::Drawing::Size(63, 25);
+			this->HeadRoomLabel->TabIndex = 43;
+			this->HeadRoomLabel->Text = L"ÒÈÏ :";
+			// 
+			// HeadRoomLabel2
+			// 
+			this->HeadRoomLabel2->AutoSize = true;
+			this->HeadRoomLabel2->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(204)));
+			this->HeadRoomLabel2->Location = System::Drawing::Point(12, 509);
+			this->HeadRoomLabel2->Name = L"HeadRoomLabel2";
+			this->HeadRoomLabel2->Size = System::Drawing::Size(19, 25);
+			this->HeadRoomLabel2->TabIndex = 44;
+			this->HeadRoomLabel2->Text = L"-";
+			// 
+			// FemLabel1
+			// 
+			this->FemLabel1->AutoEllipsis = true;
+			this->FemLabel1->AutoSize = true;
+			this->FemLabel1->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(204)));
+			this->FemLabel1->Location = System::Drawing::Point(15, 335);
+			this->FemLabel1->Name = L"FemLabel1";
+			this->FemLabel1->Size = System::Drawing::Size(106, 25);
+			this->FemLabel1->TabIndex = 45;
+			this->FemLabel1->Text = L"FEM/ISO :";
+			// 
+			// FemLabel2
+			// 
+			this->FemLabel2->AutoSize = true;
+			this->FemLabel2->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(204)));
+			this->FemLabel2->Location = System::Drawing::Point(15, 360);
+			this->FemLabel2->Name = L"FemLabel2";
+			this->FemLabel2->Size = System::Drawing::Size(19, 25);
+			this->FemLabel2->TabIndex = 46;
+			this->FemLabel2->Text = L"-";
+			// 
+			// HOISTPIC
+			// 
+			this->HOISTPIC->Location = System::Drawing::Point(138, 242);
+			this->HOISTPIC->Name = L"HOISTPIC";
+			this->HOISTPIC->Size = System::Drawing::Size(304, 229);
+			this->HOISTPIC->SizeMode = System::Windows::Forms::PictureBoxSizeMode::StretchImage;
+			this->HOISTPIC->TabIndex = 47;
+			this->HOISTPIC->TabStop = false;
+			// 
 			// DataLogger
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(8, 16);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->BackColor = System::Drawing::Color::White;
 			this->ClientSize = System::Drawing::Size(1045, 768);
+			this->Controls->Add(this->HOISTPIC);
+			this->Controls->Add(this->FemLabel2);
+			this->Controls->Add(this->FemLabel1);
+			this->Controls->Add(this->HeadRoomLabel2);
+			this->Controls->Add(this->HeadRoomLabel);
 			this->Controls->Add(this->button7);
 			this->Controls->Add(this->button6);
 			this->Controls->Add(this->button5);
@@ -657,7 +737,7 @@ namespace DataLoggerApp
 			this->Controls->Add(this->button3);
 			this->Controls->Add(this->button2);
 			this->Controls->Add(this->button1);
-			this->Controls->Add(this->pic1);
+			this->Controls->Add(this->TUGAB);
 			this->Controls->Add(this->crossTMotLogo);
 			this->Controls->Add(this->crossTMotSL);
 			this->Controls->Add(this->crossTMotModel);
@@ -697,7 +777,8 @@ namespace DataLoggerApp
 			this->RightToLeftLayout = true;
 			this->Text = L"ÄÈÏËÎÌÍÀ ÐÀÁÎÒÀ ÍÀ ÐÓÌÅÍ ÖÎËÎÂ - ÒÓ ÃÀÁÐÎÂÎ";
 			this->Load += gcnew System::EventHandler(this, &DataLogger::DataLogger_Load);
-			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pic1))->EndInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->TUGAB))->EndInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->HOISTPIC))->EndInit();
 			this->ResumeLayout(false);
 			this->PerformLayout();
 
@@ -775,11 +856,44 @@ namespace DataLoggerApp
 				std::string hoistN = msclr::interop::marshal_as<std::string>(hoistN1);
 				if (hoistN == input) {
 					System::String^ sysString;
+					std::string buff1, buff2;
 					sysString = gcnew String(Hoists[i].HoistSalesDescription.c_str());
-					//this->textBox1->Text += "||";
-					//std::printf >> buffer >> std::endl;
-					MessageBox::Show("Ñúùåñòâóâà â áàçàòà äàííè!");
 					this->labHmodel2->Text = sysString;
+					sysString = gcnew String(Hoists[i].SERIE.c_str());
+					this->labHProdNum2->Text = sysString;
+					sysString = gcnew String(Hoists[i].FEM.c_str());
+					this->FemLabel2->Text = sysString;
+					buff1 = Hoists[i].LMODEL2 + " " + Hoists[i].L1stkW + "/" + Hoists[i].L2ndkW + " kW";
+					sysString = gcnew String(buff1.c_str());
+					this->liftMotSL->Text = sysString;
+					buff1 = Hoists[i].CTpcs + " x " + Hoists[i].CMODEL2 + " " + Hoists[i].C1stkW + "/" + Hoists[i].C2ndkW + " kW";
+					sysString = gcnew String(buff1.c_str());
+					this->crossTMotSL->Text = sysString;
+
+					buff1 = "";
+					if (Hoists[i].TYPE == "FootMounted") {
+						buff1 = "Ñòàöèîíàðåí";
+						this->HOISTPIC->ImageLocation = "C:\\Users\\rtsol\\source\\repos\\rumentsolov\\DataLoggerApp\\foot.jpg";
+					}
+					else if (Hoists[i].TYPE == "NormalHeadroom") {
+						buff1 = "Íîðìàëíà ñòðîèòåëíà âèñî÷èíà";
+						this->HOISTPIC->ImageLocation = "C:\\Users\\rtsol\\source\\repos\\rumentsolov\\DataLoggerApp\\nhr.jpg";
+					}
+					else if (Hoists[i].TYPE == "LowHeadroom") {
+						buff1 = "Íèñêà ñòðîèòåëíà âèñî÷èíà";
+						this->HOISTPIC->ImageLocation = "C:\\Users\\rtsol\\source\\repos\\rumentsolov\\DataLoggerApp\\lhr.jpg";
+					}
+					else if (Hoists[i].TYPE == "DoubleGirder") {
+						buff1 = "Äâóãðåäîâà êîëè÷êà";
+						this->HOISTPIC->ImageLocation = "C:\\Users\\rtsol\\source\\repos\\rumentsolov\\DataLoggerApp\\double.jpg";
+					}
+					
+					
+					sysString = gcnew String(buff1.c_str());
+					this->HeadRoomLabel2->Text = sysString;
+
+
+
 					isFound = true;
 					break;
 				}

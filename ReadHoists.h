@@ -25,156 +25,158 @@ void operateHoistFile() { // Since sometimes provides me errors when working wit
 
     
 
-    int counter = 0; // counts the rows readed from the input file
+    int counter = 1; // counts the rows readed from the input file
 
     std::ifstream hoistTxtFile;
     hoistTxtFile.open(hoistFile);
     std::string line;
     int startUpCurrent = 0; // this will indicate if the current is the Startup -> every first record after 0.00 in current is startup
 
-    float line1tmp, line2tmp, line3tmp;
-
-    line1tmp = line2tmp = line3tmp = 15.00;
-
     while (getline(hoistTxtFile, line)) // its easy and better to read  and process with my own txt file 
     {
+        counter++;
+            if (counter > 2) 
+            {
+                for (size_t i = 0; i < line.size(); i++) if (line[i] == ',') line[i] = ' ';
 
-            for (size_t i = 0; i < line.size(); i++) if (line[i] == ',') line[i] = ' ';
+                //std::cout << line << std::endl;
+                std::stringstream sStr(line);
+
+                std::string         HoistNO;
+                std::string      HoistSalesDescription;
+                std::string        Tons;
+                std::string        Meters;
+                std::string      FEM;
+                std::string      SERIE;
+                std::string	    ROLLZ;
+                std::string 	        RopeD;
+                std::string	    TYPE;
+                std::string 	    LSp;
+                std::string        LSp2;
+                std::string        CtSp;
+                std::string        CtSp2;
+                std::string          CTpcs;
+                std::string      OVR;
+                std::string      LMModel;
+                std::string	    LType;
+                std::string        LNomI;
+                std::string        L1stkW;
+                std::string        L2ndkW;
+                std::string        LVoltage;
+                std::string      LSPEED;
+                std::string      LIP;
+                std::string      LMODEL2;
+                std::string      LBRAKE;
+                std::string      LFR;
+                std::string      L1stPole;
+                std::string      L2ndPole;
+                std::string      CMModel;
+                std::string	    CType;
+                std::string        CNomI;
+                std::string        C1stkW;
+                std::string        C2ndkW;
+                std::string        CVoltage;
+                std::string      CSPEED;
+                std::string      CIP;
+                std::string      CMODEL2;
+                std::string      CBRAKE;
+                std::string      CFR;
+                std::string      C1stPole;
+                std::string      C2ndPole;
+
+                sStr >>
+                    HoistNO >>
+                    HoistSalesDescription >>
+                    Tons >>
+                    Meters >>
+                    FEM >>
+                    SERIE >>
+                    ROLLZ >>
+                    RopeD >>
+                    TYPE >>
+                    LSp >>
+                    LSp2 >>
+                    CtSp >>
+                    CtSp2 >>
+                    CTpcs >>
+                    OVR >>
+                    LMModel >>
+                    LType >>
+                    LNomI >>
+                    L1stkW >>
+                    L2ndkW >>
+                    LVoltage >>
+                    LSPEED >>
+                    LIP >>
+                    LMODEL2 >>
+                    LBRAKE >>
+                    LFR >>
+                    L1stPole >>
+                    L2ndPole >>
+                    CMModel >>
+                    CType >>
+                    CNomI >>
+                    C1stkW >>
+                    C2ndkW >>
+                    CVoltage >>
+                    CSPEED >>
+                    CIP >>
+                    CMODEL2 >>
+                    CBRAKE >>
+                    CFR >>
+                    C1stPole >>
+                    C2ndPole;
 
 
+                Hoist Buff(
+                    HoistNO,
+                    HoistSalesDescription,
+                    Tons,
+                    Meters,
+                    FEM,
+                    SERIE,
+                    ROLLZ,
+                    RopeD,
+                    TYPE,
+                    LSp,
+                    LSp2,
+                    CtSp,
+                    CtSp2,
+                    CTpcs,
+                    OVR,
+                    LMModel,
+                    LType,
+                    LNomI,
+                    L1stkW,
+                    L2ndkW,
+                    LVoltage,
+                    LSPEED,
+                    LIP,
+                    LMODEL2,
+                    LBRAKE,
+                    LFR,
+                    L1stPole,
+                    L2ndPole,
+                    CMModel,
+                    CType,
+                    CNomI,
+                    C1stkW,
+                    C2ndkW,
+                    CVoltage,
+                    CSPEED,
+                    CIP,
+                    CMODEL2,
+                    CBRAKE,
+                    CFR,
+                    C1stPole,
+                    C2ndPole
+                );
+                std::cout << "----------------" << std::endl;
+                std::cout << Buff.HoistSalesDescription << std::endl;
+                std::cout << "----------------"  << std::endl;
+                Hoists.push_back(Buff);
+            }
             
-
-            int         HoistNO;
-            std::string      HoistSalesDescription;
-            float       Tons;
-            float       Meters;
-            std::string      FEM;
-            std::string      SERIE;
-            std::string	    ROLLZ;
-            int	        RopeD;
-            std::string	    TYPE;
-            float	    LSp;
-            float       LSp2;
-            float       CtSp;
-            float       CtSp2;
-            int         CTpcs;
-            std::string      OVR;
-            std::string      LMModel;
-            std::string	    LType;
-            float       LNomI;
-            float       L1stkW;
-            float       L2ndkW;
-            float       LVoltage;
-            std::string      LSPEED;
-            std::string      LIP;
-            std::string      LMODEL2;
-            std::string      LBRAKE;
-            std::string      LFR;
-            std::string      L1stPole;
-            std::string      L2ndPole;
-            std::string      CMModel;
-            std::string	    CType;
-            float       CNomI;
-            float       C1stkW;
-            float       C2ndkW;
-            float       CVoltage;
-            std::string      CSPEED;
-            std::string      CIP;
-            std::string      CMODEL2;
-            std::string      CBRAKE;
-            std::string      CFR;
-            std::string      C1stPole;
-            std::string      C2ndPole;
-
-            hoistTxtFile >>
-                HoistNO >>
-                HoistSalesDescription >>
-                Tons >>
-                Meters >>
-                FEM >>
-                SERIE >>
-                ROLLZ >>
-                RopeD >>
-                TYPE >>
-                LSp >>
-                LSp2 >>
-                CtSp >>
-                CtSp2 >>
-                CTpcs >>
-                OVR >>
-                LMModel >>
-                LType >>
-                LNomI >>
-                L1stkW >>
-                L2ndkW >>
-                LVoltage >>
-                LSPEED >>
-                LIP >>
-                LMODEL2 >>
-                LBRAKE >>
-                LFR >>
-                L1stPole >>
-                L2ndPole >>
-                CMModel >>
-                CType >>
-                CNomI >>
-                C1stkW >>
-                C2ndkW >>
-                CVoltage >>
-                CSPEED >>
-                CIP >>
-                CMODEL2 >>
-                CBRAKE >>
-                CFR >>
-                C1stPole >>
-                C2ndPole;
-
-
-            Hoist Buff(
-                HoistNO ,
-                HoistSalesDescription ,
-                Tons ,
-                Meters ,
-                FEM ,
-                SERIE ,
-                ROLLZ ,
-                RopeD ,
-                TYPE ,
-                LSp ,
-                LSp2 ,
-                CtSp ,
-                CtSp2 ,
-                CTpcs ,
-                OVR ,
-                LMModel ,
-                LType ,
-                LNomI ,
-                L1stkW ,
-                L2ndkW ,
-                LVoltage ,
-                LSPEED ,
-                LIP ,
-                LMODEL2 ,
-                LBRAKE ,
-                LFR ,
-                L1stPole ,
-                L2ndPole ,
-                CMModel,
-                CType ,
-                CNomI ,
-                C1stkW ,
-                C2ndkW ,
-                CVoltage,
-                CSPEED ,
-                CIP ,
-                CMODEL2 ,
-                CBRAKE ,
-                CFR ,
-                C1stPole ,
-                C2ndPole
-            );
-
-            Hoists.push_back(Buff);
         }
     }
 
@@ -223,7 +225,8 @@ int ReadH()
         MessageBox::Show("ERROR: Download failed. HRESULT: 0x");
         return 2;
     }
-  
+    
+    operateHoistFile();
     return 0;
 }
 

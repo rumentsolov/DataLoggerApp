@@ -5,6 +5,7 @@
 #include "ActionLogger.h"
 #include "trend.h"
 #include "ReadHoists.h"
+#include <msclr\marshal_cppstd.h>
 
 namespace DataLoggerApp {
 
@@ -775,12 +776,31 @@ namespace DataLoggerApp {
 	}
 	private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e) {
 
-		String^ buffer = this->textBox1->Text;
+		System::String^ buffer = this->textBox1->Text;
+
+		std::string input = msclr::interop::marshal_as<std::string>(buffer);
+
+		std::cout << input << std::endl;
+
+
 		for (int i = 0; i < Hoists.size(); i++) {
 
-			if (Hoists[i].HoistNO.ToString() == buffer) {
-				this->textBox1->Text += "||";
-				MessageBox::Show("Found!");
+			std::cout << Hoists[i].HoistNO << std::endl;
+			
+			System::String^ hoistN1 = gcnew String(Hoists[i].HoistNO.c_str());
+			
+			std::string hoistN = msclr::interop::marshal_as<std::string>(hoistN1);
+				 
+			if (hoistN  == input) {
+				//this->textBox1->Text += "||";
+				
+
+				//std::printf >> buffer >> std::endl;
+				MessageBox::Show("Съществува в базата данни!");
+			}
+			else
+			{
+				MessageBox::Show("Не съществува в базата данни!");
 			}
 		}
 

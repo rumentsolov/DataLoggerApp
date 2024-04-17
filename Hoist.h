@@ -6,27 +6,27 @@ class Hoist {
 
 public:
 
-    int         HoistNO;
+    std::string      HoistNO;
     std::string      HoistSalesDescription;
-    float       Tons;
-    float       Meters;
+    std::string       Tons;
+    std::string       Meters;
     std::string      FEM;
     std::string      SERIE;
     std::string	    ROLLZ;
-    int	        RopeD;
+    std::string	        RopeD;
     std::string	    TYPE;
-    float	    LSp;
-    float       LSp2;
-    float       CtSp;
-    float       CtSp2;
-    int         CTpcs;
+    std::string	    LSp;
+    std::string       LSp2;
+    std::string       CtSp;
+    std::string       CtSp2;
+    std::string         CTpcs;
     std::string      OVR;
     std::string      LMModel;
     std::string	    LType;
-    float       LNomI;
-    float       L1stkW;
-    float       L2ndkW;
-    float       LVoltage;
+    std::string       LNomI;
+    std::string       L1stkW;
+    std::string       L2ndkW;
+    std::string       LVoltage;
     std::string      LSPEED;
     std::string      LIP;
     std::string      LMODEL2;
@@ -36,10 +36,10 @@ public:
     std::string      L2ndPole;
     std::string      CMModel;
     std::string	    CType;
-    float       CNomI;
-    float       C1stkW;
-    float       C2ndkW;
-    float       CVoltage;
+    std::string       CNomI;
+    std::string       C1stkW;
+    std::string       C2ndkW;
+    std::string       CVoltage;
     std::string      CSPEED;
     std::string      CIP;
     std::string      CMODEL2;
@@ -52,8 +52,8 @@ public:
     Hoist();
 
     Hoist(
-        int HoistNO, std::string      HoistSalesDescription,  float  Tons,        float       Meters,        std::string      FEM,        std::string      SERIE,        std::string	    ROLLZ, int	        RopeD,        std::string	    TYPE,
-        float	    LSp,        float       LSp2,        float       CtSp,        float       CtSp2,        int         CTpcs,        std::string      OVR,        std::string      LMModel,        std::string	    LType,        float       LNomI,        float       L1stkW,        float       L2ndkW,        float       LVoltage,        std::string      LSPEED,        std::string      LIP,        std::string      LMODEL2,        std::string      LBRAKE,        std::string      LFR,        std::string      L1stPole,        std::string      L2ndPole,        std::string      CMModel,        std::string	    CType,        float       CNomI,        float       C1stkW,        float       C2ndkW,        float       CVoltage,        std::string      CSPEED,        std::string      CIP,        std::string      CMODEL2,        std::string      CBRAKE,        std::string      CFR,        std::string      C1stPole,        std::string      C2ndPole
+        std::string HoistNO, std::string      HoistSalesDescription,  std::string  Tons,        std::string       Meters,        std::string      FEM,        std::string      SERIE,        std::string	    ROLLZ, std::string	        RopeD,        std::string	    TYPE,
+        std::string	    LSp,        std::string       LSp2,        std::string       CtSp,        std::string       CtSp2,        std::string         CTpcs,        std::string      OVR,        std::string      LMModel,        std::string	    LType,        std::string       LNomI,        std::string       L1stkW,        std::string       L2ndkW,        std::string       LVoltage,        std::string      LSPEED,        std::string      LIP,        std::string      LMODEL2,        std::string      LBRAKE,        std::string      LFR,        std::string      L1stPole,        std::string      L2ndPole,        std::string      CMModel,        std::string	    CType,        std::string       CNomI,        std::string       C1stkW,        std::string       C2ndkW,        std::string       CVoltage,        std::string      CSPEED,        std::string      CIP,        std::string      CMODEL2,        std::string      CBRAKE,        std::string      CFR,        std::string      C1stPole,        std::string      C2ndPole
     );
 
     ~Hoist() {};
@@ -62,7 +62,7 @@ public:
 };
 
 Hoist::Hoist(
-    int         _HoistNO,    std::string      _HoistSalesDescription,    float       _Tons,    float       _Meters,    std::string      _FEM,    std::string      _SERIE,    std::string	    _ROLLZ,    int	        _RopeD,    std::string	    _TYPE,    float	    _LSp,    float       _LSp2,    float       _CtSp,    float       _CtSp2,    int         _CTpcs,    std::string      _OVR,    std::string      _LMModel,    std::string	    _LType,    float       _LNomI,    float       _L1stkW,    float       _L2ndkW,    float       _LVoltage,    std::string      _LSPEED,    std::string      _LIP,    std::string      _LMODEL2,    std::string      _LBRAKE,    std::string      _LFR,    std::string      _L1stPole,    std::string      _L2ndPole,    std::string      _CMModel,    std::string	    _CType,    float       _CNomI,    float       _C1stkW,    float       _C2ndkW,    float       _CVoltage,    std::string      _CSPEED,    std::string      _CIP,
+    std::string         _HoistNO,    std::string      _HoistSalesDescription,    std::string       _Tons,    std::string       _Meters,    std::string      _FEM,    std::string      _SERIE,    std::string	    _ROLLZ,    std::string	        _RopeD,    std::string	    _TYPE,    std::string	    _LSp,    std::string       _LSp2,    std::string       _CtSp,    std::string       _CtSp2,    std::string         _CTpcs,    std::string      _OVR,    std::string      _LMModel,    std::string	    _LType,    std::string       _LNomI,    std::string       _L1stkW,    std::string       _L2ndkW,    std::string       _LVoltage,    std::string      _LSPEED,    std::string      _LIP,    std::string      _LMODEL2,    std::string      _LBRAKE,    std::string      _LFR,    std::string      _L1stPole,    std::string      _L2ndPole,    std::string      _CMModel,    std::string	    _CType,    std::string       _CNomI,    std::string       _C1stkW,    std::string       _C2ndkW,    std::string       _CVoltage,    std::string      _CSPEED,    std::string      _CIP,
     std::string      _CMODEL2,    std::string      _CBRAKE,    std::string      _CFR,    std::string      _C1stPole,    std::string      _C2ndPole)
 {
     this->HoistNO = _HoistNO;

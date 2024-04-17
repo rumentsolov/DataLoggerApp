@@ -7,7 +7,8 @@
 #include "ReadHoists.h"
 #include <msclr\marshal_cppstd.h>
 
-namespace DataLoggerApp {
+namespace DataLoggerApp 
+{
 
 	using namespace System;
 	using namespace System::ComponentModel;
@@ -20,7 +21,7 @@ namespace DataLoggerApp {
 
 	public ref class DataLogger : public System::Windows::Forms::Form
 	{
-	public:
+		public:
 		DataLogger(void)
 		{
 			InitializeComponent();
@@ -29,7 +30,7 @@ namespace DataLoggerApp {
 			//
 		}
 
-	protected:
+		protected:
 		/// <summary>
 		/// Clean up any resources being used.
 		/// </summary>
@@ -40,88 +41,65 @@ namespace DataLoggerApp {
 				delete components;
 			}
 		}
-	public: System::Windows::Forms::Button^ btnSTOP;
-	public: System::Windows::Forms::Button^ btnSTART;
-	public: System::Windows::Forms::Label^ labAV;
+		public: System::Windows::Forms::Button^ btnSTOP;
+		public: System::Windows::Forms::Button^ btnSTART;
+		public: System::Windows::Forms::Label^ labAV;
 
-	public: System::Windows::Forms::Label^ labAV1;
-	public: System::Windows::Forms::Label^ labAV1var;
-	public: System::Windows::Forms::Label^ labAV2;
-	public: System::Windows::Forms::Label^ labAV2var;
-	public: System::Windows::Forms::Label^ labAV3;
-	public: System::Windows::Forms::Label^ labAV3var;
+		public: System::Windows::Forms::Label^ labAV1;
+		public: System::Windows::Forms::Label^ labAV1var;
+		public: System::Windows::Forms::Label^ labAV2;
+		public: System::Windows::Forms::Label^ labAV2var;
+		public: System::Windows::Forms::Label^ labAV3;
+		public: System::Windows::Forms::Label^ labAV3var;
 
-	public: System::Windows::Forms::Label^ labAC12;
-	public: System::Windows::Forms::Label^ labAC12var;
-	public: System::Windows::Forms::Label^ labAC23;
-	public: System::Windows::Forms::Label^ labAC23var;
-	public: System::Windows::Forms::Label^ labAC31;
-	public: System::Windows::Forms::Label^ labAC31var;
+		public: System::Windows::Forms::Label^ labAC12;
+		public: System::Windows::Forms::Label^ labAC12var;
+		public: System::Windows::Forms::Label^ labAC23;
+		public: System::Windows::Forms::Label^ labAC23var;
+		public: System::Windows::Forms::Label^ labAC31;
+		public: System::Windows::Forms::Label^ labAC31var;
 
-	public: System::Windows::Forms::Label^ labAComb;
-	public: System::Windows::Forms::Label^ labACombvar;
+		public: System::Windows::Forms::Label^ labAComb;
+		public: System::Windows::Forms::Label^ labACombvar;
 
-	public: System::Windows::Forms::Label^ labAAct;
-	public: System::Windows::Forms::Label^ labAActvar;
+		public: System::Windows::Forms::Label^ labAAct;
+		public: System::Windows::Forms::Label^ labAActvar;
 
-	public: System::Windows::Forms::Label^ labAReact;
-	public: System::Windows::Forms::Label^ labAReactvar;
+		public: System::Windows::Forms::Label^ labAReact;
+		public: System::Windows::Forms::Label^ labAReactvar;
 
-	public: System::Windows::Forms::Label^ labAApp;
-	public: System::Windows::Forms::Label^ labAAppvar;
-	public: System::Windows::Forms::Label^ labSN;
-	private: System::Windows::Forms::TextBox^ textBox1;
-	public: System::Windows::Forms::Label^ labHmodel;
-	public: System::Windows::Forms::Label^ labHmodel2;
-	public: System::Windows::Forms::Label^ labHProdNum;
-	public: System::Windows::Forms::Label^ labHProdNum2;
-	public: System::Windows::Forms::Label^ liftMotSL;
+		public: System::Windows::Forms::Label^ labAApp;
+		public: System::Windows::Forms::Label^ labAAppvar;
+		public: System::Windows::Forms::Label^ labSN;
+		private: System::Windows::Forms::TextBox^ textBox1;
+		public: System::Windows::Forms::Label^ labHmodel;
+		public: System::Windows::Forms::Label^ labHmodel2;
+		public: System::Windows::Forms::Label^ labHProdNum;
+		public: System::Windows::Forms::Label^ labHProdNum2;
+		public: System::Windows::Forms::Label^ liftMotSL;
 
-	public: System::Windows::Forms::Label^ liftMmodel;
-	public: System::Windows::Forms::Label^ liftMLogo;
-	public: System::Windows::Forms::Label^ crossTMotLogo;
-	public: System::Windows::Forms::Label^ crossTMotSL;
+		public: System::Windows::Forms::Label^ liftMmodel;
+		public: System::Windows::Forms::Label^ liftMLogo;
+		public: System::Windows::Forms::Label^ crossTMotLogo;
+		public: System::Windows::Forms::Label^ crossTMotSL;
 
-	public: System::Windows::Forms::Label^ crossTMotModel;
-	private: System::Windows::Forms::PictureBox^ pic1;
-	public: System::Windows::Forms::Button^ button1;
-	public: System::Windows::Forms::Button^ button2;
-	public: System::Windows::Forms::Button^ button3;
-	public: System::Windows::Forms::Button^ button4;
-	public: System::Windows::Forms::Button^ button5;
-	public: System::Windows::Forms::Button^ button6;
-	public: System::Windows::Forms::Button^ button7;
+		public: System::Windows::Forms::Label^ crossTMotModel;
+		private: System::Windows::Forms::PictureBox^ pic1;
+		public: System::Windows::Forms::Button^ button1;
+		public: System::Windows::Forms::Button^ button2;
+		public: System::Windows::Forms::Button^ button3;
+		public: System::Windows::Forms::Button^ button4;
+		public: System::Windows::Forms::Button^ button5;
+		public: System::Windows::Forms::Button^ button6;
+		public: System::Windows::Forms::Button^ button7;
 
-	private:
-	public:
-
-	public:
-
-	public:
-
-	public:
-
-	public:
-
-
-	private:
-	public:
-
-	private:
-
-
-
-
-
-
-
-	private:
+		private:
 		/// <summary>
 		/// Required designer variable.
 		/// </summary>
 		System::ComponentModel::Container^ components;
 
-#pragma region Windows Form Designer generated code
+		#pragma region Windows Form Designer generated code
 		/// Initialization of components in DataCollecotr Do not modify !!!
 		void InitializeComponent(void)
 		{
@@ -723,9 +701,11 @@ namespace DataLoggerApp {
 			this->ResumeLayout(false);
 			this->PerformLayout();
 
-		}
-#pragma endregion
-	private: System::Void btnSTOP_Click(System::Object^ sender, System::EventArgs^ e) {
+		} //void InitializeComponent(void) finish here
+
+		#pragma endregion
+		private: System::Void btnSTOP_Click(System::Object^ sender, System::EventArgs^ e) 
+		{
 
 		run();
 
@@ -757,56 +737,55 @@ namespace DataLoggerApp {
 		AVG Active Power :7954.18W
 		AVG Apparent Power :11282.03W
 		*/
-	}
-	private: System::Void DataLogger_Load(System::Object^ sender, System::EventArgs^ e) {
-	}
-	private: System::Void button2_Click(System::Object^ sender, System::EventArgs^ e) {
-	}
-	private: System::Void labAReact_Click(System::Object^ sender, System::EventArgs^ e) {
-	}
-	private: System::Void button6_Click(System::Object^ sender, System::EventArgs^ e) {
-	}
-	private: System::Void labAAppvar_Click(System::Object^ sender, System::EventArgs^ e) {
-	}
-	private: System::Void labAReactvar_Click(System::Object^ sender, System::EventArgs^ e) {
-	}
-	private: System::Void labAApp_Click(System::Object^ sender, System::EventArgs^ e) {
-	}
-	private: System::Void button7_Click(System::Object^ sender, System::EventArgs^ e) {
-	}
-	private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e) {
-
-		System::String^ buffer = this->textBox1->Text;
-
-		std::string input = msclr::interop::marshal_as<std::string>(buffer);
-
-		std::cout << input << std::endl;
-
-
-		for (int i = 0; i < Hoists.size(); i++) {
-
-			std::cout << Hoists[i].HoistNO << std::endl;
-			
-			System::String^ hoistN1 = gcnew String(Hoists[i].HoistNO.c_str());
-			
-			std::string hoistN = msclr::interop::marshal_as<std::string>(hoistN1);
-				 
-			if (hoistN  == input) {
-				//this->textBox1->Text += "||";
-				
-
-				//std::printf >> buffer >> std::endl;
-				MessageBox::Show("Съществува в базата данни!");
+		}
+		private: System::Void DataLogger_Load(System::Object^ sender, System::EventArgs^ e) 
+		{
+		}
+		private: System::Void button2_Click(System::Object^ sender, System::EventArgs^ e) 
+		{
+		}
+		private: System::Void labAReact_Click(System::Object^ sender, System::EventArgs^ e) 
+		{
+		}
+		private: System::Void button6_Click(System::Object^ sender, System::EventArgs^ e) 
+		{
+		}
+		private: System::Void labAAppvar_Click(System::Object^ sender, System::EventArgs^ e) 
+		{
+		}
+		private: System::Void labAReactvar_Click(System::Object^ sender, System::EventArgs^ e) 
+		{
+		}
+		private: System::Void labAApp_Click(System::Object^ sender, System::EventArgs^ e) 
+		{
+		}
+		private: System::Void button7_Click(System::Object^ sender, System::EventArgs^ e) 
+		{
+		}
+		private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e)
+		{
+			System::String^ buffer = this->textBox1->Text;
+			std::string input = msclr::interop::marshal_as<std::string>(buffer);
+			//std::cout << input << std::endl;
+			bool isFound = false;
+			for (int i = 0; i < Hoists.size(); i++)
+			{
+				std::cout << Hoists[i].HoistNO << std::endl;
+				System::String^ hoistN1 = gcnew String(Hoists[i].HoistNO.c_str());
+				std::string hoistN = msclr::interop::marshal_as<std::string>(hoistN1);
+				if (hoistN == input) {
+					//this->textBox1->Text += "||";
+					//std::printf >> buffer >> std::endl;
+					MessageBox::Show("Съществува в базата данни!");
+					isFound = true;
+				}
 			}
-			else
+			if (!isFound)
 			{
 				MessageBox::Show("Не съществува в базата данни!");
 			}
 		}
-
-	}
-
-};
+	};
 }
 
 #endif 

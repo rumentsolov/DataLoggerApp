@@ -774,10 +774,14 @@ namespace DataLoggerApp
 				System::String^ hoistN1 = gcnew String(Hoists[i].HoistNO.c_str());
 				std::string hoistN = msclr::interop::marshal_as<std::string>(hoistN1);
 				if (hoistN == input) {
+					System::String^ sysString;
+					sysString = gcnew String(Hoists[i].HoistSalesDescription.c_str());
 					//this->textBox1->Text += "||";
 					//std::printf >> buffer >> std::endl;
 					MessageBox::Show("Съществува в базата данни!");
+					this->labHmodel2->Text = sysString;
 					isFound = true;
+					break;
 				}
 			}
 			if (!isFound)

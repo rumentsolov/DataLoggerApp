@@ -12,6 +12,7 @@
 
 std::vector<Hoist> Hoists;
 
+bool isFound;
 
 std::string  deskTopPath = GetDTPath();
 std::string  pathStr = deskTopPath.c_str();

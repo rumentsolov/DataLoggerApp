@@ -5,6 +5,7 @@
 #include "ActionLogger.h"
 #include "trend.h"
 #include "ReadHoists.h"
+#include "Graphs.h"
 #include <msclr\marshal_cppstd.h>
 
 namespace DataLoggerApp 
@@ -90,10 +91,10 @@ namespace DataLoggerApp
 		public: System::Windows::Forms::Button^ button1;
 		public: System::Windows::Forms::Button^ button2;
 		public: System::Windows::Forms::Button^ button3;
-		public: System::Windows::Forms::Button^ button4;
-		public: System::Windows::Forms::Button^ button5;
-		public: System::Windows::Forms::Button^ button6;
-		public: System::Windows::Forms::Button^ button7;
+
+
+
+
 
 	public: System::Windows::Forms::Label^ HeadRoomLabel2;
 	public: System::Windows::Forms::Label^ FemLabel1;
@@ -154,10 +155,6 @@ namespace DataLoggerApp
 			this->button1 = (gcnew System::Windows::Forms::Button());
 			this->button2 = (gcnew System::Windows::Forms::Button());
 			this->button3 = (gcnew System::Windows::Forms::Button());
-			this->button4 = (gcnew System::Windows::Forms::Button());
-			this->button5 = (gcnew System::Windows::Forms::Button());
-			this->button6 = (gcnew System::Windows::Forms::Button());
-			this->button7 = (gcnew System::Windows::Forms::Button());
 			this->HeadRoomLabel2 = (gcnew System::Windows::Forms::Label());
 			this->FemLabel1 = (gcnew System::Windows::Forms::Label());
 			this->FemLabel2 = (gcnew System::Windows::Forms::Label());
@@ -190,6 +187,7 @@ namespace DataLoggerApp
 			this->btnSTART->TabIndex = 1;
 			this->btnSTART->Text = L"Õ¿◊¿ÀŒ";
 			this->btnSTART->UseVisualStyleBackColor = false;
+			this->btnSTART->Click += gcnew System::EventHandler(this, &DataLogger::btnSTART_Click);
 			// 
 			// labAV
 			// 
@@ -561,62 +559,14 @@ namespace DataLoggerApp
 			this->button3->TabIndex = 38;
 			this->button3->Text = L"√–¿‘» ¿";
 			this->button3->UseVisualStyleBackColor = false;
-			// 
-			// button4
-			// 
-			this->button4->BackColor = System::Drawing::Color::Yellow;
-			this->button4->Font = (gcnew System::Drawing::Font(L"Consolas", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(204)));
-			this->button4->Location = System::Drawing::Point(1152, 275);
-			this->button4->Name = L"button4";
-			this->button4->Size = System::Drawing::Size(132, 30);
-			this->button4->TabIndex = 39;
-			this->button4->Text = L"√–¿‘» ¿";
-			this->button4->UseVisualStyleBackColor = false;
-			// 
-			// button5
-			// 
-			this->button5->BackColor = System::Drawing::Color::Yellow;
-			this->button5->Font = (gcnew System::Drawing::Font(L"Consolas", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(204)));
-			this->button5->Location = System::Drawing::Point(1152, 329);
-			this->button5->Name = L"button5";
-			this->button5->Size = System::Drawing::Size(132, 30);
-			this->button5->TabIndex = 40;
-			this->button5->Text = L"√–¿‘» ¿";
-			this->button5->UseVisualStyleBackColor = false;
-			// 
-			// button6
-			// 
-			this->button6->BackColor = System::Drawing::Color::Yellow;
-			this->button6->Font = (gcnew System::Drawing::Font(L"Consolas", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(204)));
-			this->button6->Location = System::Drawing::Point(1152, 375);
-			this->button6->Name = L"button6";
-			this->button6->Size = System::Drawing::Size(132, 30);
-			this->button6->TabIndex = 41;
-			this->button6->Text = L"√–¿‘» ¿";
-			this->button6->UseVisualStyleBackColor = false;
-			this->button6->Click += gcnew System::EventHandler(this, &DataLogger::button6_Click);
-			// 
-			// button7
-			// 
-			this->button7->BackColor = System::Drawing::Color::Yellow;
-			this->button7->Font = (gcnew System::Drawing::Font(L"Consolas", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(204)));
-			this->button7->Location = System::Drawing::Point(1152, 424);
-			this->button7->Name = L"button7";
-			this->button7->Size = System::Drawing::Size(132, 30);
-			this->button7->TabIndex = 42;
-			this->button7->Text = L"√–¿‘» ¿";
-			this->button7->UseVisualStyleBackColor = false;
-			this->button7->Click += gcnew System::EventHandler(this, &DataLogger::button7_Click);
+			this->button3->Click += gcnew System::EventHandler(this, &DataLogger::button3_Click);
 			// 
 			// HeadRoomLabel2
 			// 
 			this->HeadRoomLabel2->AutoSize = true;
 			this->HeadRoomLabel2->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 10.2F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
+			this->HeadRoomLabel2->ForeColor = System::Drawing::SystemColors::WindowFrame;
 			this->HeadRoomLabel2->Location = System::Drawing::Point(310, 46);
 			this->HeadRoomLabel2->Name = L"HeadRoomLabel2";
 			this->HeadRoomLabel2->Size = System::Drawing::Size(0, 20);
@@ -663,10 +613,6 @@ namespace DataLoggerApp
 			this->Controls->Add(this->FemLabel2);
 			this->Controls->Add(this->FemLabel1);
 			this->Controls->Add(this->HeadRoomLabel2);
-			this->Controls->Add(this->button7);
-			this->Controls->Add(this->button6);
-			this->Controls->Add(this->button5);
-			this->Controls->Add(this->button4);
 			this->Controls->Add(this->button3);
 			this->Controls->Add(this->button2);
 			this->Controls->Add(this->button1);
@@ -755,6 +701,7 @@ namespace DataLoggerApp
 		}
 		private: System::Void button2_Click(System::Object^ sender, System::EventArgs^ e) 
 		{
+			GetVolt();
 		}
 		private: System::Void labAReact_Click(System::Object^ sender, System::EventArgs^ e) 
 		{
@@ -797,10 +744,18 @@ namespace DataLoggerApp
 					buff1 = Hoists[i].LMODEL2 + " " + Hoists[i].L1stkW + "/" + Hoists[i].L2ndkW + " kW";
 					sysString = gcnew String(buff1.c_str());
 					this->liftMotSL->Text = sysString;
-					buff1 = Hoists[i].CTpcs + " x " + Hoists[i].CMODEL2 + " " + Hoists[i].C1stkW + "/" + Hoists[i].C2ndkW + " kW";
+					if (stoi(Hoists[i].CTpcs) > 0) 
+					{
+						buff1 = Hoists[i].CTpcs + " x " + Hoists[i].CMODEL2 + " " + Hoists[i].C1stkW + "/" + Hoists[i].C2ndkW + " kW";
+						this->crossTMotLogo->Enabled = true;
+					}
+					else 
+					{
+						buff1 = "";
+						this->crossTMotLogo->Enabled = false;
+					}
 					sysString = gcnew String(buff1.c_str());
 					this->crossTMotSL->Text = sysString;
-
 					buff1 = "";
 					if (Hoists[i].TYPE == "FootMounted") {
 						buff1 = "—“¿÷»ŒÕ¿–≈Õ";
@@ -834,7 +789,14 @@ namespace DataLoggerApp
 				MessageBox::Show("ÕÂ Ò˙˘ÂÒÚ‚Û‚‡ ‚ ·‡Á‡Ú‡ ‰‡ÌÌË!");
 			}
 		}
-	};
+	private: System::Void btnSTART_Click(System::Object^ sender, System::EventArgs^ e) 
+	{
+	}
+	private: System::Void button3_Click(System::Object^ sender, System::EventArgs^ e) 
+	{
+		GetCur();
+	}
+};
 }
 
 #endif 

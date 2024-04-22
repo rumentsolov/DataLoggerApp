@@ -197,7 +197,7 @@ int ReadH()
    // ComInit init2;
     CComPtr<IStream> hStreamH; // use CComPtr so you don't have to manually call Release()
 
-    HRESULT hrH = URLOpenBlockingStreamW(nullptr, L"https://rumentsolov.com/gallery/hoist.csv", &hStreamH, 0, nullptr);// Open the HTTP request
+    HRESULT hrH = URLOpenBlockingStreamW(nullptr, L"https://rumentsolov.com//hoist.csv", &hStreamH, 0, nullptr);// Open the HTTP request
     if (FAILED(hrH))
     {
         MessageBox::Show("ERROR: Could not connect. HRESULT: 0x");

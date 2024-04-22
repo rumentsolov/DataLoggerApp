@@ -15,7 +15,7 @@
 #include "Processment.h"
 
 
-int run()
+int GetTheTrends()
 {
 
     // OPERATING WITH INFO FROM CSV FILE AND CREATE RAW TXT FILE TO PROCESSING WITH
@@ -24,7 +24,7 @@ int run()
 
     ComInit init;
     CComPtr<IStream> pStream; // use CComPtr so you don't have to manually call Release()
-    HRESULT hr = URLOpenBlockingStreamW(nullptr, L"https://www.rumentsolov.com/Portfolio/trend.csv", &pStream, 0, nullptr);// Open the HTTP request
+    HRESULT hr = URLOpenBlockingStreamW(nullptr, L"https://www.rumentsolov.com/gallery/trend.csv", &pStream, 0, nullptr);// Open the HTTP request
     if (FAILED(hr))
     {
         //MessageBox::Show("ERROR: Could not connect. HRESULT: 0x");

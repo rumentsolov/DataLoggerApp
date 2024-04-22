@@ -16,17 +16,6 @@
 #include "GlobalVariables.h"
 
 
-float voltageLine12AVG;       // Average voltage between line 1 and 2
-float voltageLine23AVG;       // Average voltage between line 2 and 3
-float voltageLine31AVG;       // Average voltage between line 3 and 1
-float currentLine1AVG;        // Average current in line 1
-float currentLine2AVG;        // Average current in line 2
-float currentLine3AVG;        // Average current in line 3
-float combinatedPowerAVG;     // Average combinated power factor for line 1+2+3
-float activePowerAVG;         // Average combinated active power for line 1+2+3
-float reactivePowerAVG;       // Average combinated reactive power for line 1+2+3
-float apparentPowerAVG;       // Average combinated apparent power for line 1+2+3
-float calculatedPowerAVG;     // Average combinated calculated power for line 1+2+3
 
 
 void writeToFL(std::string totalString, const char* newFile) {
@@ -217,10 +206,10 @@ void operateTXTFile() { // Since sometimes provides me errors when working with 
 
     writeToFL(osTr.str(), recordFile);
 
-   /* delete[] rawFile;
+    delete[] rawFile;
     rawFile = nullptr;
     delete[] recordFile;
-    recordFile = nullptr;*/
+    recordFile = nullptr;
 
     return;
 }

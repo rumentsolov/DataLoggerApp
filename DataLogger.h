@@ -540,7 +540,7 @@ namespace DataLoggerApp
 			this->button2->BackColor = System::Drawing::Color::Yellow;
 			this->button2->Font = (gcnew System::Drawing::Font(L"Consolas", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
-			this->button2->Location = System::Drawing::Point(1152, 55);
+			this->button2->Location = System::Drawing::Point(1183, 55);
 			this->button2->Name = L"button2";
 			this->button2->Size = System::Drawing::Size(132, 81);
 			this->button2->TabIndex = 37;
@@ -553,7 +553,7 @@ namespace DataLoggerApp
 			this->button3->BackColor = System::Drawing::Color::Yellow;
 			this->button3->Font = (gcnew System::Drawing::Font(L"Consolas", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
-			this->button3->Location = System::Drawing::Point(1152, 142);
+			this->button3->Location = System::Drawing::Point(1183, 142);
 			this->button3->Name = L"button3";
 			this->button3->Size = System::Drawing::Size(132, 74);
 			this->button3->TabIndex = 38;
@@ -609,7 +609,7 @@ namespace DataLoggerApp
 			this->AutoScaleDimensions = System::Drawing::SizeF(8, 16);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->BackColor = System::Drawing::Color::White;
-			this->ClientSize = System::Drawing::Size(1310, 768);
+			this->ClientSize = System::Drawing::Size(1407, 768);
 			this->Controls->Add(this->FemLabel2);
 			this->Controls->Add(this->FemLabel1);
 			this->Controls->Add(this->HeadRoomLabel2);
@@ -665,7 +665,19 @@ namespace DataLoggerApp
 		private: System::Void btnSTOP_Click(System::Object^ sender, System::EventArgs^ e) 
 		{
 
-		run();
+			GetTheTrends();
+
+		//voltageLine12AVG = 1.12;
+		//voltageLine23AVG = 1.12;
+		//voltageLine31AVG = 1.12;
+		//currentLine1AVG = 1.12;
+		//currentLine2AVG = 1.12;
+		//currentLine3AVG = 1.12;
+		//combinatedPowerAVG = 1.12;
+		//activePowerAVG = 1.12;
+		//reactivePowerAVG = 1.12;
+		//apparentPowerAVG = 1.12;
+
 
 		this->labAV1var->Text = voltageLine12AVG.ToString("0.00") + " V";
 		this->labAV2var->Text = voltageLine23AVG.ToString("0.00") + " V";
@@ -675,15 +687,15 @@ namespace DataLoggerApp
 		this->labAC23var->Text = currentLine2AVG.ToString("0.00") + " A";
 		this->labAC31var->Text = currentLine3AVG.ToString("0.00") + " A";
 
-		this->labACombvar->Text = combinatedPowerAVG.ToString("0.00") + " W";
+		this->labACombvar->Text = combinatedPowerAVG.ToString("0.00") + " kW";
 
-		this->labAActvar->Text = activePowerAVG.ToString("0.00") + " W";
+		this->labAActvar->Text = activePowerAVG.ToString("0.00") + " kW";
 
-		this->labAReactvar->Text = reactivePowerAVG.ToString("0.00") + " W";
+		this->labAReactvar->Text = reactivePowerAVG.ToString("0.00") + " kW";
 
-		this->labAAppvar->Text = apparentPowerAVG.ToString("0.00") + " W";
+		this->labAAppvar->Text = apparentPowerAVG.ToString("0.00") + " kW";
 
-		MessageBox::Show("Job done!");
+		MessageBox::Show("Обработката на информация е успешна!");
 		/*
 		AVG Voltage 1-2 :398.60V
 		AVG Voltage 2-3 :391.55V

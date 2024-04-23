@@ -513,8 +513,8 @@ namespace DataLoggerApp
 			// 
 			// TUGAB
 			// 
-			this->TUGAB->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"TUGAB.Image")));
-			this->TUGAB->InitialImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"TUGAB.InitialImage")));
+			//this->TUGAB->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"TUGAB.Image")));
+			this->TUGAB->ImageLocation = "C:\\Users\\rtsol\\source\\repos\\DataLoggerApp\\Images\\Logo_TU_Gab.jpg";
 			this->TUGAB->Location = System::Drawing::Point(45, 209);
 			this->TUGAB->Name = L"TUGAB";
 			this->TUGAB->Size = System::Drawing::Size(204, 196);
@@ -717,7 +717,7 @@ namespace DataLoggerApp
 		}
 		private: System::Void button2_Click(System::Object^ sender, System::EventArgs^ e) 
 		{
-			GetVolt();
+			system("C:\\Users\\rtsol\\source\\repos\\DataLoggerApp\\Images\\Current.jpg");
 		}
 		private: System::Void labAReact_Click(System::Object^ sender, System::EventArgs^ e) 
 		{
@@ -775,19 +775,19 @@ namespace DataLoggerApp
 					buff1 = "";
 					if (Hoists[i].TYPE == "FootMounted") {
 						buff1 = "ÑÒÀÖÈÎÍÀÐÅÍ";
-						this->HOISTPIC->ImageLocation = "C:\\Users\\rtsol\\source\\repos\\rumentsolov\\DataLoggerApp\\foot.jpg";
+						this->HOISTPIC->ImageLocation = "C:\\Users\\rtsol\\source\\repos\\DataLoggerApp\\Images\\foot.jpg";
 					}
 					else if (Hoists[i].TYPE == "NormalHeadroom") {
 						buff1 = "ÍÎÐÌÀËÍÀ ÑÒÐÎÈÒÅËÍÀ ÂÈÑÎ×ÈÍÀ";
-						this->HOISTPIC->ImageLocation = "C:\\Users\\rtsol\\source\\repos\\rumentsolov\\DataLoggerApp\\nhr.jpg";
+						this->HOISTPIC->ImageLocation = "C:\\Users\\rtsol\\source\\repos\\DataLoggerApp\\Images\\\nhr.jpg";
 					}
 					else if (Hoists[i].TYPE == "LowHeadroom") {
 						buff1 = "ÍÈÑÊÀ ÑÒÐÎÈÒÅËÍÀ ÂÈÑÎ×ÈÍÀ";
-						this->HOISTPIC->ImageLocation = "C:\\Users\\rtsol\\source\\repos\\rumentsolov\\DataLoggerApp\\lhr.jpg";
+						this->HOISTPIC->ImageLocation = "C:\\Users\\rtsol\\source\\repos\\DataLoggerApp\\Images\\lhr.jpg";
 					}
 					else if (Hoists[i].TYPE == "DoubleGirder") {
 						buff1 = "ÄÂÓÃÐÅÄÎÂÀ ÊÎËÈ×ÊÀ";
-						this->HOISTPIC->ImageLocation = "C:\\Users\\rtsol\\source\\repos\\rumentsolov\\DataLoggerApp\\double.jpg";
+						this->HOISTPIC->ImageLocation = "C:\\Users\\rtsol\\source\\repos\\DataLoggerApp\\Images\\double.jpg";
 					}
 					
 					
@@ -810,7 +810,7 @@ namespace DataLoggerApp
 	}
 	private: System::Void button3_Click(System::Object^ sender, System::EventArgs^ e) 
 	{
-		GetCur();
+		system("C:\\Users\\rtsol\\source\\repos\\DataLoggerApp\\Images\\Current.jpg");
 	}
 };
 }

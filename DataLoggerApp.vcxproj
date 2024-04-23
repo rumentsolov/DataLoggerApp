@@ -134,7 +134,6 @@
     </ClInclude>
     <ClInclude Include="GetDesktopPath.h" />
     <ClInclude Include="GlobalVariables.h" />
-    <ClInclude Include="Graphs.h" />
     <ClInclude Include="Hoist.h" />
     <ClInclude Include="Processment.h" />
     <ClInclude Include="ReadHoists.h" />

@@ -6,6 +6,7 @@
 #include <sstream>
 #include <chrono>
 #include <ctime>   
+#include "GlobalVariables.h"
 
 // GET DATE & TIME ACTION IS DONE IN FORMAT YYYY-MM-DD.HH:mm:ss
 const std::string currentDateTime() {
@@ -23,7 +24,7 @@ void ActionSave(std::string buff) {
 
     std::fstream myLogger;
 
-    myLogger.open("LoginActions.txt", std::ios::out | std::ios::app);
+    myLogger.open(loginFile, std::ios::out | std::ios::app);
 
     if (!myLogger.is_open()) {
         std::ofstream out(buff);
